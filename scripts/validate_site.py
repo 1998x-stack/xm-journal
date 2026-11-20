@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 from html.parser import HTMLParser
+import importlib.util
 from pathlib import Path
 import json
 import xml.etree.ElementTree as ET
@@ -10,6 +11,8 @@ from build_site import discover_posts
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "_site"
+SKILL_VALIDATOR = ROOT / "skills" / "olah-style-journal" / "scripts" / "validate.py"
+POSTS = ROOT / "posts"
 
 OBSOLETE_PATHS = (
     "config/projects.json",
@@ -165,6 +168,18 @@ def main() -> None:
         failures.extend(audit_page(page))
         for svg in page.parent.glob("assets/*.svg"):
             failures.extend(validate_svg(svg))
+
+    # Run the canonical Olah-style Skill validator against each source article.
+    spec = importlib.util.spec_from_file_location("olah_journal_validator", SKILL_VALIDATOR)
+    if spec is None or spec.loader is None:
+        failures.append(f"Cannot load Skill validator: {SKILL_VALIDATOR}")
+    else:
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        for source_page in sorted(POSTS.glob("**/index.html")):
+            result = module.validate(source_page)
+            if not result.get("pass"):
+                failures.extend(f"Skill validation {source_page}: {issue}" for issue in result.get("failures", []))
 
     try:
         index = json.loads((OUT / "posts" / "index.json").read_text(encoding="utf-8"))
