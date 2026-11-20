@@ -40,3 +40,14 @@ Deduplicate repeated mentions while preserving distinct outcomes. Separate activ
 
 ## HTML and verification
 Semantic, responsive, print-friendly and accessible; one H1, valid heading order, no remote dependencies, keyboard-operable controls, reduced-motion support. Validate Sunday, month-end, leap day, year rollover, simultaneous boundaries, incomplete periods and backfills. Browser QA desktop/tablet/360/390px. Skipped checks are NOT VERIFIED.
+
+## Cross-repository project evidence
+- Read `config/projects.json`; treat it as the authoritative project roster.
+- Collect commits, PR lifecycle events, GitHub Actions workflow runs and deployment statuses for the reporting date.
+- Preserve URLs, SHA/PR numbers, timestamps and repository slugs in `data/github_activity/YYYY-MM-DD.json`.
+- A PR is merged only when `merged_at` exists. A workflow is successful only when conclusion is `success`. A deployment is successful only when its deployment status is `success`.
+- Distinguish API errors / inaccessible repositories / missing snapshots from a genuine empty event list.
+- Never treat commit counts as hours, productivity, quality or impact. Explain what the artifact changed and why it matters only when source notes support that interpretation.
+- GitHub activity cannot reconstruct conversation intent, reasoning, offline work or learning. Capture these in `journal/daily/YYYY/MM/YYYY-MM-DD.md`.
+- On backfill, rerun the pipeline for the target date; all affected period reports must be regenerated from the complete available snapshots.
+- Scheduled automation runs at 00:15 Asia/Shanghai. Manual dispatch supports a historical `YYYY-MM-DD` date.
