@@ -4,6 +4,8 @@ from __future__ import annotations
 
 import argparse
 from datetime import date
+from html import escape
+import json
 from pathlib import Path
 import re
 import sys
@@ -34,30 +36,55 @@ def main() -> int:
 
     destination = REPO_ROOT / "posts" / f"{day.year:04d}" / f"{day.month:02d}" / day.isoformat()
     destination.mkdir(parents=True, exist_ok=True)
+    output = destination / "index.html"
+    if output.exists():
+        parser.error(f"Refusing to overwrite existing article: {output}")
+
     template = (SKILL_ROOT / "assets" / "templates" / "article.html").read_text(encoding="utf-8")
     values = {
         "{{DATE}}": day.isoformat(),
-        "{{TITLE}}": args.title,
-        "{{SUMMARY}}": args.summary,
-        "{{CATEGORY}}": args.category,
-        "{{CATEGORY_LABEL}}": args.category_label,
-        "{{TAGS}}": args.tags,
-        "{{DEK}}": args.dek,
+        "{{TITLE}}": escape(args.title, quote=True),
+        "{{SUMMARY}}": escape(args.summary, quote=True),
+        "{{CATEGORY}}": escape(args.category, quote=True),
+        "{{CATEGORY_LABEL}}": escape(args.category_label),
+        "{{TAGS}}": escape(args.tags, quote=True),
+        "{{DEK}}": escape(args.dek),
         "{{CSS_PATH}}": "../../../../skills/olah-style-journal/assets/css/article.css",
         "{{JS_PATH}}": "../../../../skills/olah-style-journal/assets/js/interactions.js",
         "{{TOC}}": '<strong>今日复盘</strong><a href="#opening">今天发生了什么</a><a href="#insight">核心感悟</a><a href="#action">下一步</a>',
     }
     for token, value in values.items():
         template = template.replace(token, value)
-    output = destination / "index.html"
-    if output.exists():
-        parser.error(f"Refusing to overwrite existing article: {output}")
     output.write_text(template, encoding="utf-8")
-    (destination / "evidence.json").write_text(
-        '{"source":{"id":"voice-' + day.isoformat() + '","type":"user-provided spoken reflection"},'
-        '"claims":[]}\\n',
+
+    evidence_path = destination / "evidence.json"
+    evidence_path.write_text(
+        json.dumps(
+            {
+                "source": {
+                    "id": f"voice-{day.isoformat()}",
+                    "type": "user-provided spoken reflection",
+                },
+                "claims": [],
+            },
+            ensure_ascii=False,
+            indent=2,
+        ) + "\n",
         encoding="utf-8",
     )
+
+    daily_source = REPO_ROOT / "journal" / "daily" / f"{day.year:04d}" / f"{day.month:02d}" / f"{day.isoformat()}.md"
+    if not daily_source.exists():
+        daily_source.parent.mkdir(parents=True, exist_ok=True)
+        daily_source.write_text(
+            f"---\ndate: {day.isoformat()}\ntitle: {args.title}\ncategory: {args.category}\n"
+            f"tags: []\nsummary: {args.summary}\nsource_type: spoken-reflection\n---\n\n"
+            "# 今天发生了什么\n\n补充当天的口述整理。\n\n"
+            "# 今天真正意识到的事情\n\n补充核心感悟。\n\n"
+            "# 接下来准备怎么做\n\n- [ ] 补充下一步行动。\n",
+            encoding="utf-8",
+        )
+
     print(f"Created {output.relative_to(REPO_ROOT)}")
     return 0
 
