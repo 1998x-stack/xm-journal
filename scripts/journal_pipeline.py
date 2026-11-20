@@ -171,7 +171,7 @@ def main():
     parser.add_argument("--date",help="Asia/Shanghai date YYYY-MM-DD; defaults to today")
     parser.add_argument("--skip-github",action="store_true")
     args=parser.parse_args()
-    today=dt.date.fromisoformat(args.date) if args.date else dt.datetime.now(TZ).date()
+    today=dt.date.fromisoformat(args.date) if args.date else dt.datetime.now(TZ).date()\n    current_day=dt.datetime.now(TZ).date()
     registry=read_json(ROOT/"config/projects.json",{"repositories":[]})
     snapshots_dir=ROOT/"data/github_activity"; snapshots_dir.mkdir(parents=True,exist_ok=True)
     snapshot_path=snapshots_dir/f"{today.isoformat()}.json"
@@ -213,8 +213,8 @@ def main():
             start=dt.date.fromisocalendar(year,num,1); end=start+dt.timedelta(days=6); name=f"{year}-W{num:02d}"; rel=Path("reports/weekly")/str(year)/f"weekly-{name}.html"
         else:
             start=dt.date(year,num,1); end=dt.date(year,num,calendar.monthrange(year,num)[1]); name=f"{year}-{num:02d}"; rel=Path("reports/monthly")/str(year)/f"monthly-{name}.html"
-        if start>today: continue
-        period_days=[start+dt.timedelta(days=i) for i in range((min(end,today)-start).days+1)]
+        if start>current_day: continue
+        period_days=[start+dt.timedelta(days=i) for i in range((min(end,current_day)-start).days+1)]
         content=report_content(period_days,all_snapshots,notes,start,end,typ)
         subtitle=f"{start.isoformat()} 至 {end.isoformat()} · Asia/Shanghai · 自动汇总"
         (ROOT/rel).parent.mkdir(parents=True,exist_ok=True)
