@@ -41,6 +41,9 @@ jobs:
         run: |
           if [ -n "$JOURNAL_DATE" ]; then
             python scripts/journal_pipeline.py --date "$JOURNAL_DATE"
+          elif [ "$GITHUB_EVENT_NAME" = "schedule" ]; then
+            TARGET_DATE=$(TZ=Asia/Shanghai date -d "yesterday" +%F)
+            python scripts/journal_pipeline.py --date "$TARGET_DATE"
           else
             python scripts/journal_pipeline.py
           fi
