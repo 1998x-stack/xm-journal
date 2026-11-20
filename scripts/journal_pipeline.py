@@ -46,7 +46,9 @@ def collect_repo(repo, day, token):
     ]
     payload={}
     for key,path in requests:
-        try: payload[key]=api_get(path,token)
+        try:
+            if key=="workflows": payload[key]=api_pages(path,token,"workflow_runs",100,5)
+            else: payload[key]=api_pages(path,token,None,20 if key=="deployments" else 100,5)
         except Exception as exc: result["errors"].append({"source":key,"message":str(exc)[:240]}); payload[key]=[]
     for item in payload["commits"] if isinstance(payload["commits"],list) else []:
         commit=item.get("commit",{}); author=commit.get("author") or {}
@@ -60,13 +62,13 @@ def collect_repo(repo, day, token):
         result["workflow_runs"].append({"id":item.get("id"),"name":item.get("name") or item.get("display_title"),"event":item.get("event"),"status":item.get("status"),"conclusion":item.get("conclusion"),"created_at":item.get("created_at"),"updated_at":item.get("updated_at"),"url":item.get("html_url")})
     for item in payload["deployments"] if isinstance(payload["deployments"],list) else []:
         created=date_of(item.get("created_at"))
-        if created!=day: continue
         dep={"id":item.get("id"),"environment":item.get("environment"),"created_at":item.get("created_at"),"ref":item.get("ref"),"url":item.get("url"),"statuses":[]}
         try:
             statuses=api_get(f"/repos/{encoded}/deployments/{item.get('id')}/statuses?per_page=10",token)
             dep["statuses"]=[{"state":s.get("state"),"environment_url":s.get("environment_url"),"created_at":s.get("created_at"),"description":s.get("description")} for s in statuses]
         except Exception as exc: result["errors"].append({"source":"deployment_status","message":str(exc)[:200]})
-        result["deployments"].append(dep)
+        if created==day or any(date_of(st.get("created_at"))==day for st in dep["statuses"]):
+            result["deployments"].append(dep)
     return result
 def frontmatter(text):
     meta={}
