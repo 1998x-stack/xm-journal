@@ -31,7 +31,7 @@ def collect_repo(repo, day, token):
     requests=[
       ("commits",f"/repos/{encoded}/commits?since={urllib.parse.quote(since)}&until={urllib.parse.quote(until)}&per_page=100"),
       ("pulls",f"/repos/{encoded}/pulls?state=all&sort=updated&direction=desc&per_page=100"),
-      ("workflows",f"/repos/{encoded}/actions/runs?created={day.isoformat()}&per_page=100"),
+      ("workflows",f"/repos/{encoded}/actions/runs?created={urllib.parse.quote(since + chr(46) + chr(46) + until)}&per_page=100"),
       ("deployments",f"/repos/{encoded}/deployments?per_page=20")
     ]
     payload={}
@@ -110,7 +110,7 @@ def report_content(days, snapshots, notes, start, end, period_type, source_prefi
             runs += [(slug,x) for x in repo.get("workflow_runs",[])]
             deployments += [(slug,x) for x in repo.get("deployments",[])]
             errors += [(slug,x) for x in repo.get("errors",[])]
-    complete=len(covered)==expected and end<=dt.datetime.now(TZ).date()
+    complete=len(covered)==expected and end<=dt.datetime.now(TZ).date() and not errors
     status="最终版" if complete else "暂定 · 数据尚不完整"
     days_list="".join(f'<li><a href="../../daily/{d.year}/{d.month:02d}/{d.isoformat()}.html">{d.isoformat()}</a></li>' for d in [dt.date.fromisoformat(x) for x in covered])
     missing=[(start+dt.timedelta(days=i)).isoformat() for i in range(expected) if (start+dt.timedelta(days=i)).isoformat() not in snapshots]
