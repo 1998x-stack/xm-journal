@@ -1,7 +1,7 @@
 {
   "date": "2026-11-20",
   "timezone": "Asia/Shanghai",
-  "collected_at": "2026-11-20T23:51:24.743230+08:00",
+  "collected_at": "2026-11-20T23:53:51.645575+08:00",
   "repositories": [
     {
       "repository": "1998x-stack/xm-posts",
@@ -6961,6 +6961,20 @@
       "url": "https://github.com/1998x-stack/xm-journal",
       "commits": [
         {
+          "sha": "20d06317ad52",
+          "message": "journal: record successful report deployment retry",
+          "author": "XBetter",
+          "date": "2026-11-20T15:53:03Z",
+          "url": "https://github.com/1998x-stack/xm-journal/commit/20d06317ad525d6188ea638ace9f03adac5f9f9d"
+        },
+        {
+          "sha": "1be7d7849222",
+          "message": "journal: collect daily GitHub activity and refresh reports",
+          "author": "github-actions[bot]",
+          "date": "2026-11-20T15:51:24Z",
+          "url": "https://github.com/1998x-stack/xm-journal/commit/1be7d78492229423721330bec1badec1bbf37f5f"
+        },
+        {
           "sha": "463d2aea4484",
           "message": "fix: serialize journal runs and rebase generated updates safely",
           "author": "XBetter",
@@ -7524,13 +7538,23 @@
       "pull_requests": [],
       "workflow_runs": [
         {
-          "id": 44767312043,
+          "id": 44767733930,
           "name": "Build, collect and publish xm-journal",
           "event": "push",
           "status": "in_progress",
           "conclusion": null,
+          "created_at": "2026-11-20T15:53:05Z",
+          "updated_at": "2026-11-20T15:53:08Z",
+          "url": "https://github.com/1998x-stack/xm-journal/actions/runs/44767733930"
+        },
+        {
+          "id": 44767312043,
+          "name": "Build, collect and publish xm-journal",
+          "event": "push",
+          "status": "completed",
+          "conclusion": "success",
           "created_at": "2026-11-20T15:50:32Z",
-          "updated_at": "2026-11-20T15:50:41Z",
+          "updated_at": "2026-11-20T15:51:36Z",
           "url": "https://github.com/1998x-stack/xm-journal/actions/runs/44767312043"
         },
         {
