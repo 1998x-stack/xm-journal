@@ -1,1 +1,5 @@
-_site/\n.pytest_cache/\n__pycache__/\n*.py[cod]\nreports/browser/\n
+_site/
+.pytest_cache/
+__pycache__/
+*.py[cod]
+reports/browser/
