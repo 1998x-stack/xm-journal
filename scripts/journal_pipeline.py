@@ -18,6 +18,16 @@ def write_json(path, value):
 def api_get(path, token=None):
     req=urllib.request.Request(API+path,headers={"Accept":"application/vnd.github+json","X-GitHub-Api-Version":"2022-11-28","User-Agent":"xm-journal-bot",**({"Authorization":f"Bearer {token}"} if token else {})})
     with urllib.request.urlopen(req,timeout=25) as response: return json.loads(response.read().decode("utf-8"))
+def api_pages(path, token=None, list_key=None, page_size=100, max_pages=5):
+    collected=[]
+    for page in range(1,max_pages+1):
+        separator="&" if "?" in path else "?"
+        data=api_get(f"{path}{separator}page={page}",token)
+        items=data.get(list_key,[]) if list_key and isinstance(data,dict) else data
+        if not isinstance(items,list): items=[]
+        collected.extend(items)
+        if len(items)<page_size: break
+    return {list_key:collected} if list_key else collected
 def day_bounds(day):
     start=dt.datetime.combine(day,dt.time.min,TZ); end=dt.datetime.combine(day+dt.timedelta(days=1),dt.time.min,TZ)
     return start.astimezone(dt.timezone.utc).isoformat().replace("+00:00","Z"),end.astimezone(dt.timezone.utc).isoformat().replace("+00:00","Z")
