@@ -125,7 +125,7 @@ def report_content(days, snapshots, notes, start, end, period_type, source_prefi
             errors += [(slug,x) for x in repo.get("errors",[])]
     complete=len(covered)==expected and end<=dt.datetime.now(TZ).date() and not errors
     status="最终版" if complete else "暂定 · 数据尚不完整"
-    days_list="".join(f'<li><a href="../../daily/{d.year}/{d.month:02d}/{d.isoformat()}.html">{d.isoformat()}</a></li>' for d in [dt.date.fromisoformat(x) for x in covered])
+    days_list=("".join(f'<li>{x}</li>' for x in covered) if period_type=="daily" else "".join(f'<li><a href="../../daily/{dt.date.fromisoformat(x).year}/{dt.date.fromisoformat(x).month:02d}/{x}.html">{x}</a></li>' for x in covered))
     missing=[(start+dt.timedelta(days=i)).isoformat() for i in range(expected) if (start+dt.timedelta(days=i)).isoformat() not in snapshots]
     kpis=[("记录覆盖",f"{len(covered)} / {expected} 天"),("有日志正文",f"{len(note_days)} 天"),("Git 提交",len(commits)),("PR 事件",len(prs)),("CI 运行",len(runs)),("部署事件",len(deployments))]
     kpi_html="".join(f'<article><span>{esc(k)}</span><strong>{esc(v)}</strong></article>' for k,v in kpis)
@@ -149,7 +149,7 @@ def report_content(days, snapshots, notes, start, end, period_type, source_prefi
         return "<ul class='events'>"+ "".join(out)+"</ul>"
     note_html=[]
     for d in note_days:
-        n=notes[d]; note_html.append(f'<article class="note"><h3>{esc(n["title"])}</h3><p>{esc(n.get("summary") or "未填写摘要")}</p><a href="{source_prefix}{esc(n["source_path"])}">查看原始日志</a></article>')
+        n=notes[d]; note_html.append(f'<article class="note"><h3>{esc(n["title"])}</h3><p>{esc(n.get("summary") or "未填写摘要")}</p><div class="note-body">{esc(n.get("body", "")[:2400])}</div><a href="{source_prefix}{esc(n["source_path"])}">查看原始日志</a></article>')
     coverage=f'<p>报告状态：<b>{status}</b>。GitHub 快照覆盖 {len(covered)}/{expected} 天；人工日志覆盖 {len(note_days)} 天。两个覆盖率分开统计。</p>'
     if missing: coverage+=f'<p class="warning">缺少 GitHub 快照的日期：{esc(", ".join(missing))}</p>'
     if errors: coverage+=f'<p class="warning">采集异常 {len(errors)} 项；详情保存在每日活动 JSON 中，受限仓库或 API 失败不能当作零活动。</p>'
