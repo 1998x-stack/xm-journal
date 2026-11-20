@@ -1,6 +1,32 @@
 {
   "version": 1,
-  "daily": [],
-  "weekly": [],
-  "monthly": []
+  "generated_at": "2026-11-20T23:36:09.158136+08:00",
+  "timezone": "Asia/Shanghai",
+  "daily": [
+    {
+      "date": "2026-11-20",
+      "path": "reports/daily/2026/11/2026-11-20.html",
+      "type": "daily",
+      "has_note": true,
+      "snapshot": true
+    }
+  ],
+  "weekly": [
+    {
+      "period": "2026-W47",
+      "start": "2026-11-16",
+      "end": "2026-11-22",
+      "path": "reports/weekly/2026/weekly-2026-W47.html",
+      "type": "weekly"
+    }
+  ],
+  "monthly": [
+    {
+      "period": "2026-11",
+      "start": "2026-11-01",
+      "end": "2026-11-30",
+      "path": "reports/monthly/2026/monthly-2026-11.html",
+      "type": "monthly"
+    }
+  ]
 }

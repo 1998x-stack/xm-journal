@@ -1,4 +1,21 @@
 {
   "version": 1,
-  "entries": []
+  "entries": [
+    {
+      "id": "2026-11-20",
+      "date": "2026-11-20",
+      "title": "xm-journal 第二阶段：跨仓库日报与报告生产管线",
+      "category": "engineering",
+      "tags": [
+        "automation",
+        "github-actions",
+        "visualization",
+        "ci-cd"
+      ],
+      "status": "in_progress",
+      "summary": "建立六仓库 GitHub 活动采集、日报/周报/月报 HTML 生成、首页动态仪表盘和每日定时发布链路；端到端验证仍在进行。",
+      "source_path": "journal/daily/2026/11/2026-11-20.md",
+      "source_hash": "f54a39f0188765e1192ef61f3bfe1ae2c2c146c97afe3178b36234db7a9b2bce"
+    }
+  ]
 }
