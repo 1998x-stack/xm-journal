@@ -1,13 +1,22 @@
-/* Progressive enhancement example: highlight a figure stage, keep ARIA state in sync. */
+/* Progressive enhancement: step through a reflection or learning model. */
 (() => {
   document.querySelectorAll('[data-stepper]').forEach(group => {
+    const scope = group.closest('[data-stepper-root]') || group.parentElement || group;
     const buttons = [...group.querySelectorAll('[data-stage]')];
-    const items = [...group.querySelectorAll('[data-panel]')];
+    const items = [...scope.querySelectorAll('[data-panel]')];
+
     function activate(stage) {
-      buttons.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.stage === stage)));
-      items.forEach(e => { e.hidden = e.dataset.panel !== stage; });
+      buttons.forEach(button => {
+        button.setAttribute('aria-pressed', String(button.dataset.stage === stage));
+      });
+      items.forEach(panel => {
+        panel.hidden = panel.dataset.panel !== stage;
+      });
     }
-    buttons.forEach(b => b.addEventListener('click', () => activate(b.dataset.stage)));
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => activate(button.dataset.stage));
+    });
     if (buttons.length) activate(buttons[0].dataset.stage);
   });
 })();
