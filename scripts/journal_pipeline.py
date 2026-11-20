@@ -42,13 +42,13 @@ def collect_repo(repo, day, token):
       ("commits",f"/repos/{encoded}/commits?since={urllib.parse.quote(since)}&until={urllib.parse.quote(until)}&per_page=100"),
       ("pulls",f"/repos/{encoded}/pulls?state=all&sort=updated&direction=desc&per_page=100"),
       ("workflows",f"/repos/{encoded}/actions/runs?created={urllib.parse.quote(since + chr(46) + chr(46) + until)}&per_page=100"),
-      ("deployments",f"/repos/{encoded}/deployments?per_page=20")
+      ("deployments",f"/repos/{encoded}/deployments?per_page=10")
     ]
     payload={}
     for key,path in requests:
         try:
             if key=="workflows": payload[key]=api_pages(path,token,"workflow_runs",100,5)
-            else: payload[key]=api_pages(path,token,None,20 if key=="deployments" else 100,1 if key=="deployments" else 5)
+            else: payload[key]=api_pages(path,token,None,10 if key=="deployments" else 100,1 if key=="deployments" else 5)
         except Exception as exc: result["errors"].append({"source":key,"message":str(exc)[:240]}); payload[key]=[]
     for item in payload["commits"] if isinstance(payload["commits"],list) else []:
         commit=item.get("commit",{}); author=commit.get("author") or {}
