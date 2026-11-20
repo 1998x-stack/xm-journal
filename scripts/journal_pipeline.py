@@ -95,10 +95,10 @@ def svg_bars(counter,title):
         rows.append(f'<text x="8" y="{y+14}" class="bar-label">{esc(name[:24])}</text><rect x="190" y="{y}" width="{width:.1f}" height="20" rx="5" class="bar"/><text x="{min(620,198+width):.1f}" y="{y+15}" class="bar-value">{value}</text>')
     height=max(70,len(rows)*34+12)
     return f'<svg viewBox="0 0 660 {height}" role="img" aria-label="{esc(title)}"><title>{esc(title)}</title><desc>各仓库在报告周期内的提交数量。</desc>{"".join(rows)}</svg>'
-def report_shell(title,subtitle,content,kind):
-    return f'''<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="{esc(title)}"><title>{esc(title)} · xm-journal</title><link rel="stylesheet" href="../../../assets/report.css"></head><body><header><a href="../../../index.html">← xm-journal</a><p class="eyebrow">{esc(kind.upper())} REPORT</p><h1>{esc(title)}</h1><p>{esc(subtitle)}</p></header><main>{content}</main><footer>xm-journal · Evidence first, reflection always.</footer></body></html>'''
-def report_content(days, snapshots, notes, start, end, period_type):
-    expected=(end-start).days+1; covered=[d for d in days if d in snapshots]; note_days=[d for d in days if d in notes]
+def report_shell(title,subtitle,content,kind,root_prefix):
+    return f'''<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="{esc(title)}"><title>{esc(title)} · xm-journal</title><link rel="stylesheet" href="{root_prefix}assets/report.css"></head><body><header><a href="{root_prefix}index.html">← xm-journal</a><p class="eyebrow">{esc(kind.upper())} REPORT</p><h1>{esc(title)}</h1><p>{esc(subtitle)}</p></header><main>{content}</main><footer>xm-journal · Evidence first, reflection always.</footer></body></html>'''
+def report_content(days, snapshots, notes, start, end, period_type, source_prefix='../../../'):
+    expected=(end-start).days+1; covered=[d for d in days if d in snapshots and not snapshots[d].get('note_only')]; note_days=[d for d in days if d in notes]
     commits=[]; prs=[]; runs=[]; deployments=[]; errors=[]; repo_counts=Counter(); active_repos=set()
     for d in covered:
         for repo in snapshots[d].get("repositories",[]):
@@ -136,7 +136,7 @@ def report_content(days, snapshots, notes, start, end, period_type):
         return "<ul class='events'>"+ "".join(out)+"</ul>"
     note_html=[]
     for d in note_days:
-        n=notes[d]; note_html.append(f'<article class="note"><h3>{esc(n["title"])}</h3><p>{esc(n.get("summary") or "未填写摘要")}</p><a href="../../../{esc(n["source_path"])}">查看原始日志</a></article>')
+        n=notes[d]; note_html.append(f'<article class="note"><h3>{esc(n["title"])}</h3><p>{esc(n.get("summary") or "未填写摘要")}</p><a href="{source_prefix}{esc(n["source_path"])}">查看原始日志</a></article>')
     coverage=f'<p>报告状态：<b>{status}</b>。GitHub 快照覆盖 {len(covered)}/{expected} 天；人工日志覆盖 {len(note_days)} 天。两个覆盖率分开统计。</p>'
     if missing: coverage+=f'<p class="warning">缺少 GitHub 快照的日期：{esc(", ".join(missing))}</p>'
     if errors: coverage+=f'<p class="warning">采集异常 {len(errors)} 项；详情保存在每日活动 JSON 中，受限仓库或 API 失败不能当作零活动。</p>'
@@ -171,12 +171,12 @@ def main():
     reports=[]
     for d,snap in sorted(all_snapshots.items()):
         day=dt.date.fromisoformat(d); n=notes.get(d)
-        daily_content=report_content([day],all_snapshots,notes,day,day,"daily")
+        daily_content=report_content([day],all_snapshots,notes,day,day,"daily","../../../../")
         title=(n.get("title") if n else "GitHub 项目活动日报")
         subtitle=f"{d} · Asia/Shanghai · "+("已包含人工日志" if n else "GitHub 证据快照；人工日志待补充")
         rel=Path("reports/daily")/str(day.year)/f"{day.month:02d}"/f"{d}.html"
         (ROOT/rel).parent.mkdir(parents=True,exist_ok=True)
-        (ROOT/rel).write_text(report_shell(title,subtitle,daily_content,"daily"),encoding="utf-8")
+        (ROOT/rel).write_text(report_shell(title,subtitle,daily_content,"daily","../../../../"),encoding="utf-8")
         reports.append({"date":d,"path":rel.as_posix(),"type":"daily","has_note":bool(n),"snapshot":not snap.get("note_only")})
     periods=set()
     for d in all_snapshots:
@@ -193,7 +193,7 @@ def main():
         content=report_content(period_days,all_snapshots,notes,start,end,typ)
         subtitle=f"{start.isoformat()} 至 {end.isoformat()} · Asia/Shanghai · 自动汇总"
         (ROOT/rel).parent.mkdir(parents=True,exist_ok=True)
-        (ROOT/rel).write_text(report_shell(("周度复盘 " if typ=="weekly" else "月度汇报 ")+name,subtitle,content,typ),encoding="utf-8")
+        (ROOT/rel).write_text(report_shell(("周度复盘 " if typ=="weekly" else "月度汇报 ")+name,subtitle,content,typ,"../../../"),encoding="utf-8")
         reports.append({"period":name,"start":start.isoformat(),"end":end.isoformat(),"path":rel.as_posix(),"type":typ})
     index={"version":1,"generated_at":dt.datetime.now(TZ).isoformat(),"timezone":"Asia/Shanghai","daily":[r for r in reports if r["type"]=="daily"],"weekly":[r for r in reports if r["type"]=="weekly"],"monthly":[r for r in reports if r["type"]=="monthly"]}
     write_json(ROOT/"reports/index.json",index)
