@@ -98,6 +98,7 @@ def svg_bars(counter,title):
 def report_shell(title,subtitle,content,kind,root_prefix):
     return f'''<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="{esc(title)}"><title>{esc(title)} · xm-journal</title><link rel="stylesheet" href="{root_prefix}assets/report.css"></head><body><header><a href="{root_prefix}index.html">← xm-journal</a><p class="eyebrow">{esc(kind.upper())} REPORT</p><h1>{esc(title)}</h1><p>{esc(subtitle)}</p></header><main>{content}</main><footer>xm-journal · Evidence first, reflection always.</footer></body></html>'''
 def report_content(days, snapshots, notes, start, end, period_type, source_prefix='../../../'):
+    days=[d.isoformat() if isinstance(d,dt.date) else str(d) for d in days]
     expected=(end-start).days+1; covered=[d for d in days if d in snapshots and not snapshots[d].get('note_only')]; note_days=[d for d in days if d in notes]
     commits=[]; prs=[]; runs=[]; deployments=[]; errors=[]; repo_counts=Counter(); active_repos=set()
     for d in covered:
