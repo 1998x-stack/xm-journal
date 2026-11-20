@@ -1,17 +1,26 @@
-# Executable teaching and interactive controls
+# Interactive explanations for personal reflection
 
-## Code
+Interactivity is optional. Use it only when the reader benefits from exploring a sequence, comparison, decision or state transition.
 
-- Smallest executable unit first (e.g. residual block or masked attention); validate dimensions and numerical invariants.
-- Pin required dependencies, versions, device assumptions and random seed. Keep runtime local-friendly.
-- Distinguish a **toy example**, a **paper-faithful block** and a **reproduction of a benchmark**. Only the latter requires training config, dataset, seeds and repeated runs.
-- For attention: correct Q/K/V projection origin, mask semantics (`True=allowed` or `True=blocked`, never ambiguous), softmax along keys, shape of multi-head output, all-masked-row treatment.
-- For residual blocks: distinguish pre-/post-activation, downsampling/projected shortcut, channel matching and activation locations.
+## Good uses
 
-## Interactivity
+- reveal the stages of a habit loop;
+- compare the user's old and new mental model;
+- step through a decision process;
+- inspect how an idea moves from a question to an action;
+- show the sequence of a learning or feedback cycle.
 
-- Controls have `<button type="button">` or properly associated `<label>`; pressed/selected states update `aria-pressed` or equivalent.
-- Provide default static SVG explaining the concept before JS runs; widget must not be the only way to understand the paper.
-- Each interaction answers one named question (e.g. 'Which earlier tokens can this token see?').
-- No autoplay, flashing, unexplained canvas black boxes, analytics or network dependency.
-- Assert that changing control changes a non-decorative output and does not break screen-reader status (`aria-live="polite"`).
+## Requirements
+
+- Use native button type="button" controls.
+- Give every control a clear label and visible selected state such as aria-pressed.
+- Use aria-live="polite" when an interaction updates explanatory status text.
+- Keep a meaningful default state.
+- Ensure the full static explanation remains understandable without JavaScript.
+- Do not persist private journal content in browser storage.
+- No analytics, remote requests, autoplay, flashing or gamification that pressures the user.
+- Test that each control changes a meaningful explanatory state, not just color or decoration.
+
+## Keep the interaction small
+
+One interaction with five clear states is usually better than several unrelated widgets. The purpose is to deepen reflection, not increase screen time.

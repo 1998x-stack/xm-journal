@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="journal:date" content="2026-11-20">
+  <meta name="journal:title" content="从 AI 产出到个人认知：一天的工作、学习与反思">
+  <meta name="journal:summary" content="从早晨行动、工作系统的可控性，到 AI 生成内容与个人理解之间的断层：今天真正需要建设的，是把产出转化为认知与行动的闭环。">
+  <meta name="journal:category" content="reflection">
+  <meta name="journal:category-label" content="复盘与思考">
+  <meta name="journal:tags" content="habits, work, learning, ai, knowledge-internalization">
+  <meta name="journal:cover" content="assets/cover.svg">
+  <meta name="journal:cover-alt" content="从口述、理解到行动的个人认知转化路径">
+  <title>从 AI 产出到个人认知：一天的工作、学习与反思</title>
+  <link rel="stylesheet" href="../../../../skills/olah-style-journal/assets/css/article.css">
+  <style>
+    .article-header .eyebrow { color: var(--accent); letter-spacing: .14em; font-size: .75rem; font-weight: 700; }
+    .article-header .dek { max-width: 760px; }
+    .article-hero-figure { padding: 0; overflow: hidden; border: 0; background: transparent; }
+    .article-hero-figure img { display: block; width: 100%; height: auto; border-radius: 16px; }
+    .article-hero-figure figcaption { border: 0; }
+    .timeline-note { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; margin: 18px 0; }
+    .timeline-note article, .friction-card { padding: 16px; border: 1px solid var(--border); border-radius: 12px; background: var(--surface); }
+    .timeline-note h3, .friction-card h3 { margin: 0 0 6px; font-size: 1rem; }
+    .timeline-note p, .friction-card p { margin: 0; color: var(--subtle); font-size: .9rem; }
+    .friction-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; margin: 18px 0; }
+    .friction-card .number { display: inline-grid; place-items: center; width: 30px; height: 30px; margin-bottom: 10px; border-radius: 50%; background: #d6f1eb; color: #147f80; font-weight: 700; }
+    .step-panel { min-height: 130px; padding: 18px; border: 1px solid var(--border); border-radius: 12px; background: var(--surface); }
+    .step-panel[hidden] { display: none; }
+    .step-panel h3 { margin-top: 0; }
+    .principle { margin: 28px 0; padding: 24px; border-left: 4px solid var(--accent); background: var(--surface); border-radius: 0 12px 12px 0; font-size: 1.12rem; }
+    .todo-list { padding-left: 1.2rem; }
+    .todo-list li { margin: .7rem 0; }
+    @media(max-width:700px) { .timeline-note,.friction-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+<a class="skip-link" href="#content">跳转至正文</a>
+<div class="layout">
+  <nav class="toc" aria-label="文章目录">
+    <strong>2026.11.20 · 今日复盘</strong>
+    <a href="#opening">今天的主线</a>
+    <a href="#morning">早晨与通勤</a>
+    <a href="#work">白天的系统迭代</a>
+    <a href="#control">重新获得控制感</a>
+    <a href="#learning">知识系统与学习</a>
+    <a href="#internalize">把知识变成能力</a>
+    <a href="#tomorrow">明天的行动</a>
+  </nav>
+
+  <main id="content">
+    <article>
+      <header class="article-header">
+        <p class="eyebrow">DAILY REFLECTION · 2026.11.20</p>
+        <h1>从 AI 产出到个人认知</h1>
+        <p class="dek">今天做了很多内容建设，也产生了一个更重要的疑问：当 AI 能够快速替我生成文章、题解和代码，我怎样才能确保这些成果真正变成自己的理解、判断和行动？</p>
+      </header>
+
+      <section id="opening" aria-labelledby="opening-heading">
+        <h2 id="opening-heading">今天的主线：产出很多，不代表真正掌握</h2>
+        <p>今天的经历横跨早晨习惯、白天工作系统的迭代，以及晚上的知识体系建设。把这些事情连起来看，背后其实是同一个问题：<strong>如何减少行动和学习过程中的摩擦，同时不把自己的思考交给机器代替。</strong></p>
+        <figure class="article-hero-figure">
+          <img src="assets/cover.svg" alt="从口述、整理、可视化到理解和行动的认知转化路径">
+          <figcaption>这一天最重要的变化，不是增加了多少外部内容，而是开始认真面对“外部产出如何变成内部能力”。</figcaption>
+        </figure>
+      </section>
+
+      <section id="morning" aria-labelledby="morning-heading">
+        <h2 id="morning-heading">01 · 早晨：先降低启动成本</h2>
+        <p>闹钟响后没有立刻起床，问题不是不知道应该起床，而是在床上给了自己太多犹豫空间。下次闹钟一响，先起身刷牙，不等待动力出现。</p>
+        <figure>
+          <img src="assets/day-rhythm.svg" alt="一天从早晨启动、白天反馈迭代到晚上知识沉淀的时间线">
+          <figcaption>把一天分成三个有明确任务的阶段：早晨启动身体，白天解决真实问题，晚上整理认知。</figcaption>
+        </figure>
+        <div class="timeline-note">
+          <article><h3>早晨启动</h3><p>闹钟响后先刷牙；吃两个鸡蛋；尽量在 9 点左右上楼，避开人流高峰。</p></article>
+          <article><h3>通勤思考</h3><p>提前梳理当天计划，通过对话激发新想法；同时给眼睛和大脑留出放松时间。</p></article>
+          <article><h3>晚上沉淀</h3><p>继续完善教程和数学体系，但更重要的是亲自理解、手写和验证。</p></article>
+        </div>
+        <p>这个小调整背后的原则是：<strong>不要把行动寄托在情绪上，把第一个动作设计得足够简单。</strong></p>
+      </section>
+
+      <section id="work" aria-labelledby="work-heading">
+        <h2 id="work-heading">02 · 白天：反馈必须变成可见的改进</h2>
+        <p>白天主要是在和大家沟通，根据问题和测试反馈迭代系统。今天发现的三个缺口都指向同一件事：流程没有把状态和变化表达清楚。</p>
+        <div class="friction-grid">
+          <article class="friction-card"><span class="number">01</span><h3>入口过于固定</h3><p>默认使用 <code>spec.md</code>，不同任务缺少灵活选择入口的能力。</p></article>
+          <article class="friction-card"><span class="number">02</span><h3>变化不可见</h3><p>反馈后做了哪些调整、影响什么、验证了什么，没有被清楚呈现。</p></article>
+          <article class="friction-card"><span class="number">03</span><h3>失败无法续跑</h3><p>NG 后容易从头开始，不能从具体 Skill 或失败节点恢复。</p></article>
+        </div>
+        <figure>
+          <img src="assets/control-loop.svg" alt="把固定入口、变化不可见和失败重启三个问题，转化为计划、执行、证据和节点恢复的可控流程">
+          <figcaption>更好的系统应该让每个阶段都留下可理解的状态：从哪里开始、改变了什么、证据是什么、失败后从哪里继续。</figcaption>
+        </figure>
+      </section>
+
+      <section id="control" aria-labelledby="control-heading">
+        <h2 id="control-heading">03 · AI 编程：把黑盒重新变成可检查的过程</h2>
+        <p>使用 AI 写代码时，控制感越来越弱。为了确认它是否真的完成任务，需要反复索要证据，过程有时像开盲盒。</p>
+        <p>真正需要的是一条可见的执行链，而不是更多“已经完成”的口头承诺：</p>
+        <ol>
+          <li><strong>开始前：</strong>说明计划、范围、约束和验收标准。</li>
+          <li><strong>执行中：</strong>展示关键步骤、文件变化、失败位置和决策理由。</li>
+          <li><strong>结束时：</strong>列出具体改进、实际验证结果和仍未解决的问题。</li>
+          <li><strong>失败后：</strong>保留上下文，允许从指定 Skill 或节点恢复。</li>
+        </ol>
+        <p>对我来说，AI 的价值不应该是替我完成更多不可见的工作，而是让我能够更清楚地理解、检查和控制整个过程。</p>
+      </section>
+
+      <section id="learning" aria-labelledby="learning-heading">
+        <h2 id="learning-heading">04 · 知识系统：让复杂内容变得看得见</h2>
+        <p>晚上继续完善教程，并把数学题库按统一结构集成进去。算法尤其适合可视化：数组元素如何变化、双指针如何移动、二分边界如何更新、树如何遍历，都可以被图解直接呈现。</p>
+        <p>我希望逐步建立机器学习、强化学习、大模型、Agent、数学和算法的可视化知识系统。但系统本身只是工具。文章存在仓库里，并不意味着知识已经存在于我的头脑里。</p>
+        <p>我还计划编写 PyAgent 自动化脚本，让各个 tutorial 依次运行完整流程，记录执行结果和失败阶段，争取明天完成并在周末自动运行。</p>
+      </section>
+
+      <section id="internalize" aria-labelledby="internalize-heading">
+        <h2 id="internalize-heading">05 · 最重要的一步：把 AI 内容变成自己的能力</h2>
+        <p>最让我担忧的是，很多题库、博客和 PDF 虽然已经生成，但我没有真正深入理解和消化。<strong>拥有内容，不等于掌握知识；能够复述、验证和应用，才说明它开始成为自己的能力。</strong></p>
+        <figure>
+          <img src="assets/knowledge-loop.svg" alt="从 AI 生成内容开始，经过主动提问、独立复述、手写推导、自己验证和实际应用，最终形成个人能力的循环">
+          <figcaption>认知转化不是一次阅读，而是一连串需要自己亲自完成的动作。</figcaption>
+        </figure>
+
+        <div class="control-row" data-stepper aria-label="知识内化的五个步骤">
+          <button type="button" data-stage="choose" aria-pressed="true">1. 选择</button>
+          <button type="button" data-stage="recall" aria-pressed="false">2. 回忆</button>
+          <button type="button" data-stage="write" aria-pressed="false">3. 手写</button>
+          <button type="button" data-stage="verify" aria-pressed="false">4. 验证</button>
+          <button type="button" data-stage="apply" aria-pressed="false">5. 应用</button>
+        </div>
+        <div class="step-panel" data-panel="choose">
+          <h3>选择一个真正重要的知识点</h3>
+          <p>不要试图一天掌握整个知识库。选一个今天真正想弄懂的问题，明确这次学习的边界。</p>
+        </div>
+        <div class="step-panel" data-panel="recall" hidden>
+          <h3>合上网页，先独立回忆</h3>
+          <p>不看 AI 的答案，用自己的话解释概念。讲不清楚的部分，就是下一步要补上的理解缺口。</p>
+        </div>
+        <div class="step-panel" data-panel="write" hidden>
+          <h3>拿笔把逻辑写下来</h3>
+          <p>写出核心结构、公式、推导步骤和一个小例子。手写会迫使自己组织信息，而不是只产生熟悉感。</p>
+        </div>
+        <div class="step-panel" data-panel="verify" hidden>
+          <h3>用例子检验自己的解释</h3>
+          <p>自己构造数据，手动计算或运行代码。让解释接受反例和边界情况的检验。</p>
+        </div>
+        <div class="step-panel" data-panel="apply" hidden>
+          <h3>把知识带回真实生活</h3>
+          <p>把学到的方法用于工作、代码、沟通或日常决策。能够改变行动，知识才开始形成长期价值。</p>
+        </div>
+        <p class="principle">AI 应该放大我的思考能力，而不是替代我的思考过程。</p>
+      </section>
+
+      <section id="tomorrow" aria-labelledby="tomorrow-heading">
+        <h2 id="tomorrow-heading">06 · 明天：让想法落到行动</h2>
+        <ul class="todo-list">
+          <li>带上泳衣、泳裤，安排游泳。</li>
+          <li>去公司补班，积累工时。</li>
+          <li>优先完成 PyAgent 教程自动化脚本，为周末运行做准备。</li>
+          <li>挑选一个知识点，自己手写原理、推导和例子。</li>
+          <li>继续梳理系统入口、反馈变化展示和 NG 节点恢复问题。</li>
+        </ul>
+        <p>明天不需要再证明自己能让 AI 生产多少内容。更值得关注的是：有没有一项知识真正被自己理解，有没有一个想法真正变成行动。</p>
+      </section>
+    </article>
+  </main>
+</div>
+<script src="../../../../skills/olah-style-journal/assets/js/interactions.js"></script>
+</body>
+</html>

@@ -1,18 +1,15 @@
-# Taxonomy
+# Personal journal taxonomy
 
-## Primary categories (one per entry)
-| Slug | Name | Scope |
+Each visual entry has one primary category. Tags are optional and describe recurring themes, not work metrics.
+
+| Slug | Name | Use |
 |---|---|---|
-| research | 研究与论文 | 论文阅读、研究问题、实验与证据 |
-| engineering | 工程与技术 | 编码、架构、基础设施、调试与部署 |
-| learning | 学习与成长 | 知识学习、课程、练习与技能积累 |
-| product | 产品与设计 | 产品方向、需求、体验与交付 |
-| operations | 运营与流程 | 计划、流程、指标与自动化 |
-| collaboration | 协作与沟通 | 会议、评审、反馈与依赖 |
-| reflection | 复盘与思考 | 经验、原则、反思与改进 |
+| reflection | 复盘与思考 | 感悟、认知变化、经验教训、价值判断 |
+| daily-life | 日常与习惯 | 作息、通勤、饮食、生活安排 |
+| work | 工作与协作 | 工作经历、沟通、反馈、流程和决策 |
+| learning | 学习与成长 | 阅读、练习、知识内化、能力发展 |
+| ideas | 想法与探索 | 新想法、待研究问题、长期方向 |
 
-## Controlled tags
-Use lowercase kebab-case concepts: llm, agents, evaluation, retrieval, frontend, backend, ci-cd, github-actions, visualization, reading, writing, planning, automation, performance, debugging, decision, risk, milestone. Reuse existing tags; avoid near-duplicates. Tags are not categories and must not encode dates/status.
+Use a single primary category. Tags should be short lowercase kebab-case values such as habits, reflection, learning, ai, agents, visualization, decision-making, writing, energy, and communication.
 
-## Periods
-Timezone defaults to Asia/Shanghai. Week is ISO Monday–Sunday; month is calendar month. Stable period IDs: YYYY-Www and YYYY-MM.
+Do not add tags for Commit counts, PR states, CI results, deployment activity, or repository names.

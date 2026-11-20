@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 410" role="img" aria-labelledby="title desc">
+<title id="title">从黑盒执行到可控反馈</title>
+<desc id="desc">系统先暴露三个问题：入口固定、变化不可见、失败无法恢复；改进后的流程包含计划、可见变化、验证证据和节点恢复。</desc>
+<rect width="960" height="410" rx="20" fill="#f7f8f5"/>
+<g font-family="system-ui,'PingFang SC','Microsoft YaHei',sans-serif">
+  <text x="48" y="52" font-size="17" fill="#53676d" letter-spacing="2">CURRENT FRICTION</text>
+  <g fill="#fff" stroke="#dce8e4">
+    <rect x="48" y="78" width="245" height="72" rx="12"/><rect x="48" y="166" width="245" height="72" rx="12"/><rect x="48" y="254" width="245" height="72" rx="12"/>
+  </g>
+  <g fill="#203035" font-size="20">
+    <text x="74" y="121">入口固定</text><text x="74" y="209">变化不可见</text><text x="74" y="297">失败从头开始</text>
+  </g>
+  <path d="M330 202 H425" stroke="#d06d4d" stroke-width="4" stroke-linecap="round"/>
+  <path d="M410 190 L426 202 L410 214" fill="none" stroke="#d06d4d" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="480" y="52" font-size="17" fill="#147f80" letter-spacing="2">VISIBLE CONTROL LOOP</text>
+  <g>
+    <rect x="455" y="80" width="210" height="82" rx="14" fill="#d6f1eb" stroke="#147f80" stroke-width="2"/>
+    <rect x="705" y="80" width="210" height="82" rx="14" fill="#e7f0e8" stroke="#7da38d" stroke-width="2"/>
+    <rect x="705" y="245" width="210" height="82" rx="14" fill="#ebe5ff" stroke="#7461ba" stroke-width="2"/>
+    <rect x="455" y="245" width="210" height="82" rx="14" fill="#ffecd9" stroke="#d06d4d" stroke-width="2"/>
+  </g>
+  <g fill="#203035" font-size="21" text-anchor="middle">
+    <text x="560" y="128">计划与入口</text><text x="810" y="128">变化可见</text><text x="810" y="293">失败可恢复</text><text x="560" y="293">证据与验证</text>
+  </g>
+  <g fill="none" stroke="#147f80" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M665 121 H700 M690 111 L701 121 L690 131"/>
+    <path d="M810 165 V238 M800 226 L810 239 L820 226"/>
+    <path d="M705 286 H670 M680 276 L669 286 L680 296"/>
+    <path d="M560 245 V170 M550 182 L560 169 L570 182"/>
+  </g>
+</g>
+</svg>

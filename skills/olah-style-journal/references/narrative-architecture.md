@@ -1,34 +1,46 @@
-# Narrative architecture: Colah + annotated implementation
+# Narrative architecture for a daily visual journal
 
-## The two complementary teaching moves
+## The reader's path
 
-**Colah-style:** Start with a cognitive tension that the reader can feel, show a simple whole-network diagram, then unroll/focus/highlight a single reusable module in successive steps. Move from a concrete example to the architecture and only then formalize. Use color continuity and short figure captions. Avoid showing an entire graph with every arrow before the question exists.
+A journal article should feel like revisiting a day with better understanding, not reading a project status report.
 
-**Annotated-Transformer-style:** Reorganize the paper into computational dependencies. Explain a code unit alongside the corresponding architecture component, then test on a tiny synthetic example, then explain real-world training/results. The implementation is evidence about shape/control flow; it is not proof of reported benchmarks.
+Use this sequence when it fits the narration:
 
-## Required story beats
+1. **A recognizable moment** — a specific morning, conversation, failure, question or realization.
+2. **The surrounding context** — only what the reader needs to understand the moment.
+3. **The friction** — what felt difficult, confusing, inefficient or contradictory.
+4. **The shift** — what changed in the user's understanding or intention.
+5. **The mental model** — a visual explanation of the relationship or loop.
+6. **The personal meaning** — why the insight matters to the user.
+7. **The next action** — a small behavior or experiment that follows from it.
 
-1. **Opening paradox**: one domain-specific question, no marketing claim.
-2. **Baseline system**: current method and exactly where it fails; distinguish optimization, expressivity and generalization.
-3. **Core conceptual shift**: one reusable idea in a single sentence + one top-level figure.
-4. **Local unit**: show a minimal block/operation, then explain every connector and tensor.
-5. **Stepwise walkthrough**: 2–5 diagram states, label what changes at each step.
-6. **Equation with map**: each symbol points back to a named diagram part; add dimensions and normalization axis.
-7. **Composition**: build the full architecture from that block; identify variants separately.
-8. **Minimal experiment**: runnable, tested shapes/values, no false “production ready” claims.
-9. **Paper evidence**: explicit dataset, split, metric, model, table/figure; report what comparisons actually show.
-10. **Failure modes and boundaries**: edge cases, implementation pitfalls, what the study did not demonstrate.
-11. **Synthesis**: compress to a few correct mental models and link primary references.
+## Colah-inspired progressive disclosure
 
-## Figure storyboard (example)
+Start with a concrete experience. Show the whole idea simply, then zoom into one part at a time. Keep the same visual vocabulary across the explanation. Use short captions that tell the reader what to notice.
 
-| Sequence | Question | Visual | Learner action |
-|---|---|---|---|
-| 1 | Why does the old path struggle? | baseline path vs new path | compare dependencies |
-| 2 | What is the minimal unit? | single block | identify input and output |
-| 3 | Where does information go? | highlighted flow | choose a source token / branch |
-| 4 | How is it computed? | matrix/shape trace | select equation stage |
-| 5 | How does it scale? | stacked architecture | inspect stage counts |
-| 6 | Does evidence support it? | cited plot/table | inspect controls and limitations |
+Do not front-load the entire abstract model. Let each section answer a question raised by the previous one.
 
-**Rule:** Write a caption and scientific assertion for every figure before drawing it. If a figure contributes no new explanatory content, remove it.
+## Annotated-implementation-inspired explanation
+
+When the narration includes a technical system or learning process:
+- show a small, concrete example before a broad architecture;
+- explain one stage at a time;
+- map labels to visible states and transitions;
+- distinguish the user's observation from the editor's interpretation;
+- use a tiny deterministic interaction only when it clarifies the mechanism.
+
+## Figure storyboard
+
+| Sequence | Reader question | Visual |
+|---|---|---|
+| 1 | What is the main tension today? | Cover / one-sentence visual metaphor |
+| 2 | How did the day unfold? | Timeline or three-stage map |
+| 3 | What exactly was difficult? | Friction points or decision branches |
+| 4 | What changed in my understanding? | Before/after mental model |
+| 5 | How can I act on this insight? | Habit loop or next-step path |
+
+Each figure must add a new explanation. If a figure only repeats the heading, remove it.
+
+## Ending
+
+End with a sentence the user can carry into the next day, followed by a short list of actions the user actually mentioned or explicitly approved. Avoid motivational slogans that are not grounded in the narration.

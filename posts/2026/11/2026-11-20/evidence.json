@@ -1,0 +1,15 @@
+{
+  "source": {
+    "id": "voice-2026-11-20",
+    "type": "user-provided spoken reflection",
+    "date": "2026-11-20",
+    "description": "The daily narrative was reorganized from the user's own spoken notes supplied in the conversation."
+  },
+  "claims": [
+    {"id": "morning-routine", "kind": "user-statement", "claim": "The user wants to get out of bed immediately after the alarm and brush teeth first.", "source_id": "voice-2026-11-20"},
+    {"id": "system-friction", "kind": "user-statement", "claim": "The work system needs a more flexible spec.md entry, visible feedback changes, and recovery from a specific Skill after NG.", "source_id": "voice-2026-11-20"},
+    {"id": "ai-control", "kind": "user-statement", "claim": "AI-assisted coding is reducing the user's sense of control and requires clearer evidence.", "source_id": "voice-2026-11-20"},
+    {"id": "knowledge-internalization", "kind": "user-statement", "claim": "AI-generated repositories, blogs, problem sets, and PDFs have not all been deeply understood or internalized.", "source_id": "voice-2026-11-20"},
+    {"id": "cognitive-loop", "kind": "editorial-synthesis", "claim": "A useful learning loop is to question, recall, write, verify, and apply AI-generated material.", "source_id": "voice-2026-11-20", "notes": "This is an organizing interpretation of the user's stated concern, not a direct quotation."}
+  ]
+}

@@ -1,61 +1,15 @@
 {
-  "version": 1,
-  "timezone": "Asia/Shanghai",
+  "version": 2,
   "categories": [
-    {
-      "slug": "research",
-      "name": "研究与论文",
-      "description": "论文阅读、研究问题、实验与证据"
-    },
-    {
-      "slug": "engineering",
-      "name": "工程与技术",
-      "description": "编码、架构、基础设施、调试与部署"
-    },
-    {
-      "slug": "learning",
-      "name": "学习与成长",
-      "description": "知识学习、课程、练习与技能积累"
-    },
-    {
-      "slug": "product",
-      "name": "产品与设计",
-      "description": "产品方向、需求、体验与交付"
-    },
-    {
-      "slug": "operations",
-      "name": "运营与流程",
-      "description": "计划、流程、指标与自动化"
-    },
-    {
-      "slug": "collaboration",
-      "name": "协作与沟通",
-      "description": "会议、评审、反馈与依赖"
-    },
-    {
-      "slug": "reflection",
-      "name": "复盘与思考",
-      "description": "经验、原则、反思与改进"
-    }
+    {"slug": "reflection", "name": "复盘与思考", "description": "感悟、认知变化、经验教训和价值判断"},
+    {"slug": "daily-life", "name": "日常与习惯", "description": "作息、通勤、饮食、运动和生活安排"},
+    {"slug": "work", "name": "工作与协作", "description": "工作经历、沟通、反馈、流程和决策"},
+    {"slug": "learning", "name": "学习与成长", "description": "阅读、练习、知识内化和能力发展"},
+    {"slug": "ideas", "name": "想法与探索", "description": "新想法、待研究问题和长期方向"}
   ],
   "tags": [
-    "llm",
-    "agents",
-    "evaluation",
-    "retrieval",
-    "frontend",
-    "backend",
-    "ci-cd",
-    "github-actions",
-    "visualization",
-    "reading",
-    "writing",
-    "planning",
-    "automation",
-    "performance",
-    "debugging",
-    "decision",
-    "risk",
-    "milestone"
+    "habits", "reflection", "learning", "ai", "agents",
+    "visualization", "decision-making", "writing", "energy",
+    "communication", "self-understanding", "knowledge-internalization"
   ]
 }

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" role="img" aria-labelledby="title desc">
+<title id="title">知识内化闭环</title>
+<desc id="desc">AI 输出只是起点，经过主动提问、独立复述、手写推导、自己验证和实际应用，最终才逐渐形成个人能力。</desc>
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#147f80" stroke-width="1.5"/></marker></defs>
+<rect width="960" height="420" rx="20" fill="#f3f9f6"/>
+<g fill="none" stroke="#147f80" stroke-width="3" marker-end="url(#arrow)">
+  <path d="M175 122 H290"/><path d="M405 122 H520"/><path d="M635 122 H750"/>
+  <path d="M810 166 C850 250 760 310 660 310"/><path d="M545 310 H430"/><path d="M315 310 H200"/>
+  <path d="M110 270 C55 220 75 165 120 150"/>
+</g>
+<g font-family="system-ui,'PingFang SC','Microsoft YaHei',sans-serif" text-anchor="middle">
+  <g><rect x="65" y="80" width="110" height="84" rx="14" fill="#e6e9f4" stroke="#8d82b7" stroke-width="2"/><text x="120" y="130" font-size="21" fill="#3e3c5d">AI 输出</text></g>
+  <g><rect x="290" y="80" width="115" height="84" rx="14" fill="#d6f1eb" stroke="#147f80" stroke-width="2"/><text x="347" y="130" font-size="21" fill="#203035">主动提问</text></g>
+  <g><rect x="520" y="80" width="115" height="84" rx="14" fill="#d6f1eb" stroke="#147f80" stroke-width="2"/><text x="577" y="130" font-size="21" fill="#203035">独立复述</text></g>
+  <g><rect x="750" y="80" width="115" height="84" rx="14" fill="#ffecd9" stroke="#d06d4d" stroke-width="2"/><text x="807" y="130" font-size="21" fill="#203035">手写推导</text></g>
+  <g><rect x="545" y="268" width="115" height="84" rx="14" fill="#ffecd9" stroke="#d06d4d" stroke-width="2"/><text x="602" y="318" font-size="21" fill="#203035">自己验证</text></g>
+  <g><rect x="315" y="268" width="115" height="84" rx="14" fill="#ebe5ff" stroke="#7461ba" stroke-width="2"/><text x="372" y="318" font-size="21" fill="#203035">实际应用</text></g>
+  <g><rect x="85" y="268" width="115" height="84" rx="14" fill="#e4eee4" stroke="#6e9b82" stroke-width="2"/><text x="142" y="318" font-size="21" fill="#203035">个人能力</text></g>
+  <text x="480" y="35" font-size="18" fill="#53676d" letter-spacing="3">FROM GENERATED CONTENT TO OWNED KNOWLEDGE</text>
+</g>
+</svg>

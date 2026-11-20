@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" role="img" aria-labelledby="title desc">
+<title id="title">从口述到个人认知</title>
+<desc id="desc">温暖的纸张背景上，一条连续路径从口述输入经过整理和可视化，最终走向个人理解与行动。</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#eef2e9"/><stop offset="1" stop-color="#dce8df"/></linearGradient>
+  <linearGradient id="path" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#6e9b82"/><stop offset="1" stop-color="#d98b58"/></linearGradient>
+</defs>
+<rect width="1200" height="480" rx="28" fill="url(#bg)"/>
+<circle cx="1040" cy="100" r="130" fill="#fffefa" opacity=".38"/>
+<circle cx="150" cy="390" r="170" fill="#fffefa" opacity=".32"/>
+<path d="M110 250 C260 90 350 410 510 250 S770 100 900 250 S1040 350 1110 205" fill="none" stroke="url(#path)" stroke-width="10" stroke-linecap="round" opacity=".7"/>
+<g font-family="system-ui,'PingFang SC','Microsoft YaHei',sans-serif" text-anchor="middle">
+  <g><circle cx="145" cy="218" r="54" fill="#fffefa" stroke="#a8c0ad" stroke-width="3"/><text x="145" y="226" font-size="26" fill="#35584b">口述</text><text x="145" y="310" font-size="17" fill="#62796e">真实经历</text></g>
+  <g><circle cx="390" cy="260" r="54" fill="#fffefa" stroke="#a8c0ad" stroke-width="3"/><text x="390" y="268" font-size="26" fill="#35584b">整理</text><text x="390" y="350" font-size="17" fill="#62796e">找出主线</text></g>
+  <g><circle cx="645" cy="218" r="54" fill="#fffefa" stroke="#a8c0ad" stroke-width="3"/><text x="645" y="226" font-size="26" fill="#35584b">图解</text><text x="645" y="310" font-size="17" fill="#62796e">看见关系</text></g>
+  <g><circle cx="890" cy="260" r="54" fill="#fffefa" stroke="#d7a27d" stroke-width="3"/><text x="890" y="268" font-size="26" fill="#8b5936">理解</text><text x="890" y="350" font-size="17" fill="#8b735f">自己复述</text></g>
+  <g><circle cx="1080" cy="205" r="54" fill="#fffefa" stroke="#d7a27d" stroke-width="3"/><text x="1080" y="213" font-size="26" fill="#8b5936">行动</text><text x="1080" y="290" font-size="17" fill="#8b735f">形成习惯</text></g>
+  <text x="600" y="82" font-size="20" letter-spacing="7" fill="#668276">FROM VOICE TO UNDERSTANDING</text>
+</g>
+</svg>

@@ -1,10 +1,66 @@
 <!doctype html>
-<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="跨仓库项目追踪、每日记录、每周复盘和每月总结"><title>xm-journal · 个人研究与工程日志</title><link rel="stylesheet" href="assets/style.css"></head>
-<body><header class="hero"><p class="eyebrow">PERSONAL KNOWLEDGE OPERATING SYSTEM</p><h1>把每天的进展，沉淀为长期的认知资产。</h1><p>追踪六个 GitHub 项目，用可验证的提交、PR、CI 和部署证据连接每日记录、周度复盘与月度决策。</p><nav><a href="#projects">项目追踪</a><a href="#daily">每日记录</a><a href="#weekly">周度复盘</a><a href="#monthly">月度汇报</a></nav></header>
-<main><section class="metrics" id="overview"><article><b>PROJECTS</b><strong id="project-count">6</strong><span>跨仓库项目</span></article><article><b>COMMITS</b><strong id="commit-count">—</strong><span>最近快照提交数</span></article><article><b>DEPLOYMENTS</b><strong id="deploy-count">—</strong><span>部署事件（非全为成功）</span></article></section>
-<section id="projects"><h2>项目组合</h2><p>活动事件以 GitHub 为证据源。无事件、API 受限与未采集是不同状态，不会混为零。</p><div id="project-list" class="project-grid"><p class="empty">正在读取项目注册表…</p></div></section>
-<section id="daily"><h2>每日记录</h2><p>日报将 GitHub 可验证事件与人工补充的背景、决策、反思分开呈现。</p><div id="daily-list" class="report-list"><p class="empty">尚无日报快照。</p></div></section>
-<section id="weekly"><h2>周度复盘</h2><p>按 ISO 周一至周日聚合；覆盖不完整时明确标记为暂定。</p><div id="weekly-list" class="report-list"><p class="empty">周报生成后会显示在这里。</p></div></section>
-<section id="monthly"><h2>月度汇报</h2><p>按自然月分析项目成果、活动趋势、风险与下一阶段重点。</p><div id="monthly-list" class="report-list"><p class="empty">月报生成后会显示在这里。</p></div></section>
-<section><h2>如何补充当天的真实背景</h2><p>复制 <code>journal/templates/daily-template.md</code>，创建 <code>journal/daily/YYYY/MM/YYYY-MM-DD.md</code>，填写对话背景、成果、决策、阻塞和下一步。自动采集无法推断的思考与价值判断必须由人工补充。</p><p><a href="reports/index.json">查看报告数据索引</a> · <a href="data/latest-activity.json">查看最近一次 GitHub 活动快照</a> · <a href="config/projects.json">查看项目清单</a></p></section></main>
-<footer>xm-journal · Evidence first, reflection always.</footer><script src="assets/app.js" defer></script></body></html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="把每天说出来的，变成看得见的思考。">
+  <meta name="color-scheme" content="light">
+  <title>xm-journal · 每日口述与视觉日志</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">A JOURNAL BUILT FROM YOUR VOICE</p>
+      <h1>把每天说出来的，<br>变成看得见的思考。</h1>
+      <p class="hero-dek">经历、想法、困惑、感悟和计划，不必先整理好再表达。先自然地说出来，再把真正重要的东西看清楚。</p>
+      <div class="hero-note">
+        <span class="hero-mark" aria-hidden="true">✳</span>
+        <span>不是记录做了多少事，而是理解这一天发生了什么，以及它让自己想明白了什么。</span>
+      </div>
+    </div>
+    <div class="hero-orbit" aria-hidden="true"><span>VOICE</span><i></i><b>THOUGHT</b><i></i><span>VISUAL</span></div>
+  </header>
+
+  <main>
+    <section class="library" aria-labelledby="library-title">
+      <div class="library-heading">
+        <div>
+          <p class="section-kicker">THE DAILY JOURNAL</p>
+          <h2 id="library-title">每天一篇，慢慢看见自己</h2>
+          <p class="library-intro">目前收录 <strong id="post-count">{{POST_COUNT}}</strong> 篇视觉日志。每一篇都从当天真实的口述出发。</p>
+        </div>
+        <div class="filters">
+          <label class="search-label" for="search-input">搜索日志</label>
+          <input id="search-input" type="search" placeholder="搜索主题、感悟或关键词…" autocomplete="off">
+          <label class="search-label" for="category-filter">主题</label>
+          <select id="category-filter">
+            <option value="">全部主题</option>
+            {{CATEGORY_OPTIONS}}
+          </select>
+        </div>
+      </div>
+
+      <div class="post-grid" id="post-grid">
+        {{POST_CARDS}}
+      </div>
+      <p class="empty-state" id="empty-state" hidden>没有找到匹配的日志，试试其他关键词。</p>
+    </section>
+
+    <section class="manifesto" aria-labelledby="manifesto-title">
+      <div class="manifesto-symbol" aria-hidden="true">↗</div>
+      <div>
+        <p class="section-kicker">FROM VOICE TO UNDERSTANDING</p>
+        <h2 id="manifesto-title">说出来只是开始，<br>真正重要的是把它变成自己的理解。</h2>
+        <p>每一天的内容都会被整理成清晰的叙事，再用图解把关系呈现出来。最后留下的不是一份任务清单，而是一条能够反复回看的认知轨迹。</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>xm-journal</span>
+    <span>Speak naturally. Understand deeply.</span>
+  </footer>
+  <script src="assets/app.js" defer></script>
+</body>
+</html>

@@ -1,21 +1,46 @@
-# Architecture
+# xm-journal architecture
 
-## Source of truth
-- journal/daily/YYYY/MM/YYYY-MM-DD.md: human-readable daily records.
-- data/entries.json: normalized site index.
-- data/taxonomy.json: category and tag registry.
-- reports/daily/, reports/weekly/, reports/monthly/: generated visual reports.
-- reports/index.json: report catalog and source hashes.
+## Product boundary
 
-Daily notes are authoritative. Reports and pages are reproducible views; never hand-edit generated HTML.
+xm-journal is a voice-first personal reflection publishing system. Its only content input is the user's daily spoken reflection or supplied transcript. It does not collect external GitHub activity.
 
-## Pipeline
-Capture → normalize → classify → evidence ledger → visualize → roll up → build → validate → browser QA → deploy.
+## Sources of truth
 
-Daily finalization updates the day report and indexes. Weekly/monthly aggregation reads only finalized entries. Boundary dates can generate daily + weekly + monthly outputs in one run.
+- journal/daily/YYYY/MM/YYYY-MM-DD.md: normalized daily text source, preserving the user's meaning.
+- posts/YYYY/MM/YYYY-MM-DD/index.html: the Olah-style visual article for that day.
+- posts/YYYY/MM/YYYY-MM-DD/assets/: original, article-specific visual assets.
+- posts/YYYY/MM/YYYY-MM-DD/evidence.json: provenance for user statements and editorial synthesis.
+- skills/olah-style-journal/: the canonical content-production skill.
 
-## Idempotency
-Each entry has a stable date/slug ID. Reports record source IDs and SHA-256 hashes. Backfills invalidate every containing weekly/monthly report. Missing days remain visible gaps.
+The Markdown entry is the editorial source. The HTML page is the reader-facing visual artifact. The homepage is generated from article metadata.
 
-## Publishing
-Static, offline-first GitHub Pages. No server/database required. Search and charts use generated local JSON and native SVG. Pages must remain readable without JavaScript.
+## Build flow
+
+~~~text
+spoken input
+  → interpret and preserve meaning
+  → daily Markdown source
+  → article narrative + SVG storyboard
+  → standalone HTML + interactions + provenance
+  → discover article metadata
+  → build homepage and copy local assets
+  → static validation + Chromium QA
+  → GitHub Pages
+~~~
+
+## Static publishing
+
+The site is static and offline-first. The build script reads only local posts/**/index.html metadata and copies local files. It does not call GitHub APIs, access sibling repositories, or require secrets.
+
+GitHub Actions runs on pushes, pull requests, or manual dispatch. The workflow performs tests, build, validation, and browser QA. Only the main branch deploys Pages.
+
+## Explicit non-goals
+
+- Cross-repository commit, diff, PR, CI, release, or deployment collection.
+- Repository registry, project activity snapshots, or engineering productivity metrics.
+- Automatic weekly/monthly rollups and project dashboards.
+- Audio recording or speech-to-text infrastructure; speech input is supplied through ChatGPT voice or a transcript.
+
+## Reproducibility
+
+A page can be rebuilt from its committed HTML, assets, and metadata. The homepage index is derived from the article set and is never maintained by hand.
