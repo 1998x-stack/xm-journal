@@ -1,7 +1,7 @@
 {
   "date": "2026-11-20",
   "timezone": "Asia/Shanghai",
-  "collected_at": "2026-11-20T23:40:22.715670+08:00",
+  "collected_at": "2026-11-20T23:41:15.145347+08:00",
   "repositories": [
     {
       "repository": "1998x-stack/xm-posts",
@@ -6950,456 +6950,6 @@
               "description": ""
             }
           ]
-        },
-        {
-          "id": 7938616474,
-          "environment": "github-pages",
-          "created_at": "2026-11-20T09:55:01Z",
-          "ref": "main",
-          "url": "https://api.github.com/repos/1998x-stack/xm-posts/deployments/7938616474",
-          "statuses": [
-            {
-              "state": "inactive",
-              "environment_url": "",
-              "created_at": "2026-11-20T10:03:14Z",
-              "description": ""
-            },
-            {
-              "state": "success",
-              "environment_url": "https://1998x-stack.github.io/xm-posts/",
-              "created_at": "2026-11-20T09:55:43Z",
-              "description": ""
-            },
-            {
-              "state": "in_progress",
-              "environment_url": "",
-              "created_at": "2026-11-20T09:55:07Z",
-              "description": ""
-            },
-            {
-              "state": "queued",
-              "environment_url": "",
-              "created_at": "2026-11-20T09:55:05Z",
-              "description": ""
-            },
-            {
-              "state": "queued",
-              "environment_url": "",
-              "created_at": "2026-11-20T09:55:05Z",
-              "description": ""
-            },
-            {
-              "state": "waiting",
-              "environment_url": "",
-              "created_at": "2026-11-20T09:55:03Z",
-              "description": ""
-            }
-          ]
-        },
-        {
-          "id": 7938466959,
-          "environment": "github-pages",
-          "created_at": "2026-11-20T09:47:06Z",
-          "ref": "main",
-          "url": "https://api.github.com/repos/1998x-stack/xm-posts/deployments/7938466959",
-          "statuses": [
-            {
-              "state": "inactive",
-              "environment_url": "",
-              "created_at": "2026-11-20T09:55:44Z",
-              "description": ""
-            },
-            {
-              "state": "success",
-              "environment_url": "https://1998x-stack.github.io/xm-posts/",
-              "created_at": "2026-11-20T09:47:32Z",
-              "description": ""
-            },
-            {
-              "state": "in_progress",
-              "environment_url": "",
-              "created_at": "2026-11-20T09:47:11Z",
-              "description": ""
-            },
-            {
-              "state": "queued",
-              "environment_url": "",
-              "created_at": "2026-11-20T09:47:09Z",
-              "description": ""
-            },
-            {
-              "state": "queued",
-              "environment_url": "",
-              "created_at": "2026-11-20T09:47:09Z",
-              "description": ""
-            },
-            {
-              "state": "waiting",
-              "environment_url": "",
-              "created_at": "2026-11-20T09:47:07Z",
-              "description": ""
-            }
-          ]
-        },
-        {
-          "id": 7938221076,
-          "environment": "github-pages",
-          "created_at": "2026-11-20T09:34:09Z",
-          "ref": "main",
-          "url": "https://api.github.com/repos/1998x-stack/xm-posts/deployments/7938221076",
-          "statuses": [
-            {
-              "state": "inactive",
-              "environment_url": "",
-              "created_at": "2026-11-20T09:47:35Z",
-              "description": ""
-            },
-            {
-              "state": "success",
-              "environment_url": "https://1998x-stack.github.io/xm-posts/",
-              "created_at": "2026-11-20T09:34:41Z",
-              "description": ""
-            },
-            {
-              "state": "in_progress",
-              "environment_url": "",
-              "created_at": "2026-11-20T09:34:14Z",
-              "description": ""
-            },
-            {
-              "state": "queued",
-              "environment_url": "",
-              "created_at": "2026-11-20T09:34:12Z",
-              "description": ""
-            },
-            {
-              "state": "queued",
-              "environment_url": "",
-              "created_at": "2026-11-20T09:34:12Z",
-              "description": ""
-            },
-            {
-              "state": "waiting",
-              "environment_url": "",
-              "created_at": "2026-11-20T09:34:10Z",
-              "description": ""
-            }
-          ]
-        },
-        {
-          "id": 7938075636,
-          "environment": "github-pages",
-          "created_at": "2026-11-20T09:26:38Z",
-          "ref": "main",
-          "url": "https://api.github.com/repos/1998x-stack/xm-posts/deployments/7938075636",
-          "statuses": [
-            {
-              "state": "inactive",
-              "environment_url": "",
-              "created_at": "2026-11-20T09:34:43Z",
-              "description": ""
-            },
-            {
-              "state": "success",
-              "environment_url": "https://1998x-stack.github.io/xm-posts/",
-              "created_at": "2026-11-20T09:27:05Z",
-              "description": ""
-            },
-            {
-              "state": "in_progress",
-              "environment_url": "",
-              "created_at": "2026-11-20T09:26:43Z",
-              "description": ""
-            },
-            {
-              "state": "queued",
-              "environment_url": "",
-              "created_at": "2026-11-20T09:26:41Z",
-              "description": ""
-            },
-            {
-              "state": "queued",
-              "environment_url": "",
-              "created_at": "2026-11-20T09:26:41Z",
-              "description": ""
-            },
-            {
-              "state": "waiting",
-              "environment_url": "",
-              "created_at": "2026-11-20T09:26:40Z",
-              "description": ""
-            }
-          ]
-        },
-        {
-          "id": 7937957165,
-          "environment": "github-pages",
-          "created_at": "2026-11-20T09:20:42Z",
-          "ref": "main",
-          "url": "https://api.github.com/repos/1998x-stack/xm-posts/deployments/7937957165",
-          "statuses": [
-            {
-              "state": "inactive",
-              "environment_url": "",
-              "created_at": "2026-11-20T09:27:07Z",
-              "description": ""
-            },
-            {
-              "state": "success",
-              "environment_url": "https://1998x-stack.github.io/xm-posts/",
-              "created_at": "2026-11-20T09:21:06Z",
-              "description": ""
-            },
-            {
-              "state": "in_progress",
-              "environment_url": "",
-              "created_at": "2026-11-20T09:20:47Z",
-              "description": ""
-            },
-            {
-              "state": "queued",
-              "environment_url": "",
-              "created_at": "2026-11-20T09:20:45Z",
-              "description": ""
-            },
-            {
-              "state": "queued",
-              "environment_url": "",
-              "created_at": "2026-11-20T09:20:45Z",
-              "description": ""
-            },
-            {
-              "state": "waiting",
-              "environment_url": "",
-              "created_at": "2026-11-20T09:20:44Z",
-              "description": ""
-            }
-          ]
-        },
-        {
-          "id": 7937841273,
-          "environment": "github-pages",
-          "created_at": "2026-11-20T09:14:49Z",
-          "ref": "main",
-          "url": "https://api.github.com/repos/1998x-stack/xm-posts/deployments/7937841273",
-          "statuses": [
-            {
-              "state": "inactive",
-              "environment_url": "",
-              "created_at": "2026-11-20T09:21:08Z",
-              "description": ""
-            },
-            {
-              "state": "success",
-              "environment_url": "https://1998x-stack.github.io/xm-posts/",
-              "created_at": "2026-11-20T09:15:06Z",
-              "description": ""
-            },
-            {
-              "state": "in_progress",
-              "environment_url": "",
-              "created_at": "2026-11-20T09:14:53Z",
-              "description": ""
-            },
-            {
-              "state": "queued",
-              "environment_url": "",
-              "created_at": "2026-11-20T09:14:52Z",
-              "description": ""
-            },
-            {
-              "state": "queued",
-              "environment_url": "",
-              "created_at": "2026-11-20T09:14:52Z",
-              "description": ""
-            },
-            {
-              "state": "waiting",
-              "environment_url": "",
-              "created_at": "2026-11-20T09:14:50Z",
-              "description": ""
-            }
-          ]
-        },
-        {
-          "id": 7937751610,
-          "environment": "github-pages",
-          "created_at": "2026-11-20T09:10:09Z",
-          "ref": "main",
-          "url": "https://api.github.com/repos/1998x-stack/xm-posts/deployments/7937751610",
-          "statuses": [
-            {
-              "state": "inactive",
-              "environment_url": "",
-              "created_at": "2026-11-20T09:15:08Z",
-              "description": ""
-            },
-            {
-              "state": "success",
-              "environment_url": "https://1998x-stack.github.io/xm-posts/",
-              "created_at": "2026-11-20T09:10:31Z",
-              "description": ""
-            },
-            {
-              "state": "in_progress",
-              "environment_url": "",
-              "created_at": "2026-11-20T09:10:14Z",
-              "description": ""
-            },
-            {
-              "state": "queued",
-              "environment_url": "",
-              "created_at": "2026-11-20T09:10:13Z",
-              "description": ""
-            },
-            {
-              "state": "queued",
-              "environment_url": "",
-              "created_at": "2026-11-20T09:10:12Z",
-              "description": ""
-            },
-            {
-              "state": "waiting",
-              "environment_url": "",
-              "created_at": "2026-11-20T09:10:11Z",
-              "description": ""
-            }
-          ]
-        },
-        {
-          "id": 7937675978,
-          "environment": "github-pages",
-          "created_at": "2026-11-20T09:06:12Z",
-          "ref": "main",
-          "url": "https://api.github.com/repos/1998x-stack/xm-posts/deployments/7937675978",
-          "statuses": [
-            {
-              "state": "inactive",
-              "environment_url": "",
-              "created_at": "2026-11-20T09:10:33Z",
-              "description": ""
-            },
-            {
-              "state": "success",
-              "environment_url": "https://1998x-stack.github.io/xm-posts/",
-              "created_at": "2026-11-20T09:06:30Z",
-              "description": ""
-            },
-            {
-              "state": "in_progress",
-              "environment_url": "",
-              "created_at": "2026-11-20T09:06:17Z",
-              "description": ""
-            },
-            {
-              "state": "queued",
-              "environment_url": "",
-              "created_at": "2026-11-20T09:06:15Z",
-              "description": ""
-            },
-            {
-              "state": "queued",
-              "environment_url": "",
-              "created_at": "2026-11-20T09:06:15Z",
-              "description": ""
-            },
-            {
-              "state": "waiting",
-              "environment_url": "",
-              "created_at": "2026-11-20T09:06:14Z",
-              "description": ""
-            }
-          ]
-        },
-        {
-          "id": 7937334136,
-          "environment": "github-pages",
-          "created_at": "2026-11-20T08:47:04Z",
-          "ref": "main",
-          "url": "https://api.github.com/repos/1998x-stack/xm-posts/deployments/7937334136",
-          "statuses": [
-            {
-              "state": "inactive",
-              "environment_url": "",
-              "created_at": "2026-11-20T09:06:31Z",
-              "description": ""
-            },
-            {
-              "state": "success",
-              "environment_url": "https://1998x-stack.github.io/xm-posts/",
-              "created_at": "2026-11-20T08:47:27Z",
-              "description": ""
-            },
-            {
-              "state": "in_progress",
-              "environment_url": "",
-              "created_at": "2026-11-20T08:47:09Z",
-              "description": ""
-            },
-            {
-              "state": "queued",
-              "environment_url": "",
-              "created_at": "2026-11-20T08:47:07Z",
-              "description": ""
-            },
-            {
-              "state": "queued",
-              "environment_url": "",
-              "created_at": "2026-11-20T08:47:07Z",
-              "description": ""
-            },
-            {
-              "state": "waiting",
-              "environment_url": "",
-              "created_at": "2026-11-20T08:47:05Z",
-              "description": ""
-            }
-          ]
-        },
-        {
-          "id": 7937249749,
-          "environment": "github-pages",
-          "created_at": "2026-11-20T08:42:09Z",
-          "ref": "main",
-          "url": "https://api.github.com/repos/1998x-stack/xm-posts/deployments/7937249749",
-          "statuses": [
-            {
-              "state": "inactive",
-              "environment_url": "",
-              "created_at": "2026-11-20T08:47:29Z",
-              "description": ""
-            },
-            {
-              "state": "success",
-              "environment_url": "https://1998x-stack.github.io/xm-posts/",
-              "created_at": "2026-11-20T08:42:28Z",
-              "description": ""
-            },
-            {
-              "state": "in_progress",
-              "environment_url": "",
-              "created_at": "2026-11-20T08:42:14Z",
-              "description": ""
-            },
-            {
-              "state": "queued",
-              "environment_url": "",
-              "created_at": "2026-11-20T08:42:12Z",
-              "description": ""
-            },
-            {
-              "state": "queued",
-              "environment_url": "",
-              "created_at": "2026-11-20T08:42:12Z",
-              "description": ""
-            },
-            {
-              "state": "waiting",
-              "environment_url": "",
-              "created_at": "2026-11-20T08:42:11Z",
-              "description": ""
-            }
-          ]
         }
       ],
       "errors": []
@@ -7410,6 +6960,20 @@
       "display_name": "XM Journal",
       "url": "https://github.com/1998x-stack/xm-journal",
       "commits": [
+        {
+          "sha": "84fd8206fbf8",
+          "message": "perf: limit deployment status verification to latest ten per repository",
+          "author": "XBetter",
+          "date": "2026-11-20T15:40:29Z",
+          "url": "https://github.com/1998x-stack/xm-journal/commit/84fd8206fbf847456d8747140329459817017500"
+        },
+        {
+          "sha": "4305453cc333",
+          "message": "journal: collect daily GitHub activity and refresh reports",
+          "author": "github-actions[bot]",
+          "date": "2026-11-20T15:40:22Z",
+          "url": "https://github.com/1998x-stack/xm-journal/commit/4305453cc333b7aa687939e7b4a176b4ff6df61f"
+        },
         {
           "sha": "4e7832343fe4",
           "message": "perf: bound deployment status polling to latest 20 deployments per project",
@@ -7876,13 +7440,23 @@
       "pull_requests": [],
       "workflow_runs": [
         {
-          "id": 44765459262,
+          "id": 44765637747,
           "name": "Build, collect and publish xm-journal",
           "event": "push",
           "status": "in_progress",
           "conclusion": null,
+          "created_at": "2026-11-20T15:40:31Z",
+          "updated_at": "2026-11-20T15:40:34Z",
+          "url": "https://github.com/1998x-stack/xm-journal/actions/runs/44765637747"
+        },
+        {
+          "id": 44765459262,
+          "name": "Build, collect and publish xm-journal",
+          "event": "push",
+          "status": "completed",
+          "conclusion": "failure",
           "created_at": "2026-11-20T15:39:27Z",
-          "updated_at": "2026-11-20T15:39:30Z",
+          "updated_at": "2026-11-20T15:40:29Z",
           "url": "https://github.com/1998x-stack/xm-journal/actions/runs/44765459262"
         },
         {
