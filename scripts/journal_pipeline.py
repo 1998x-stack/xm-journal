@@ -140,7 +140,18 @@ def report_content(days, snapshots, notes, start, end, period_type, source_prefi
     coverage=f'<p>报告状态：<b>{status}</b>。GitHub 快照覆盖 {len(covered)}/{expected} 天；人工日志覆盖 {len(note_days)} 天。两个覆盖率分开统计。</p>'
     if missing: coverage+=f'<p class="warning">缺少 GitHub 快照的日期：{esc(", ".join(missing))}</p>'
     if errors: coverage+=f'<p class="warning">采集异常 {len(errors)} 项；详情保存在每日活动 JSON 中，受限仓库或 API 失败不能当作零活动。</p>'
-    return coverage+f'<section><h2>关键观察</h2><ul>{summary_html}</ul></section><section class="kpis">{kpi_html}</section><section><h2>仓库活动分布</h2>{svg_bars(repo_counts,"各仓库提交数量")}<p class="muted">统计口径：提交数量；不衡量代码质量、用户价值或投入工时。</p></section><section><h2>提交记录 · {len(commits)}</h2>{event_rows(commits,"commit")}</section><section><h2>Pull Requests · {len(prs)}</h2>{event_rows(prs,"pr")}</section><section><h2>CI 工作流 · {len(runs)}</h2>{event_rows(runs,"run")}</section><section><h2>部署事件 · {len(deployments)}</h2>{event_rows(deployments,"deployment")}</section><section><h2>人工日报与反思 · {len(note_days)}</h2>{''.join(note_html) if note_html else "<p class='muted'>该周期尚未补充人工日志。GitHub 采集不能替代讨论背景、决策原因和主观复盘。</p>"}</section><section><h2>数据覆盖日期</h2><ul>{days_list}</ul></section>'
+    chart_html=svg_bars(repo_counts,"各仓库提交数量")
+    notes_html="".join(note_html) if note_html else "<p class='muted'>该周期尚未补充人工日志。GitHub 采集不能替代讨论背景、决策原因和主观复盘。</p>"
+    return (coverage
+      + f'<section><h2>关键观察</h2><ul>{summary_html}</ul></section>'
+      + f'<section class="kpis">{kpi_html}</section>'
+      + f'<section><h2>仓库活动分布</h2>{chart_html}<p class="muted">统计口径：提交数量；不衡量代码质量、用户价值或投入工时。</p></section>'
+      + f'<section><h2>提交记录 · {len(commits)}</h2>{event_rows(commits,"commit")}</section>'
+      + f'<section><h2>Pull Requests · {len(prs)}</h2>{event_rows(prs,"pr")}</section>'
+      + f'<section><h2>CI 工作流 · {len(runs)}</h2>{event_rows(runs,"run")}</section>'
+      + f'<section><h2>部署事件 · {len(deployments)}</h2>{event_rows(deployments,"deployment")}</section>'
+      + f'<section><h2>人工日报与反思 · {len(note_days)}</h2>{notes_html}</section>'
+      + f'<section><h2>数据覆盖日期</h2><ul>{days_list}</ul></section>')
 def main():
     parser=argparse.ArgumentParser()
     parser.add_argument("--date",help="Asia/Shanghai date YYYY-MM-DD; defaults to today")
