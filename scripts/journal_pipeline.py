@@ -126,7 +126,7 @@ def report_content(days, snapshots, notes, start, end, period_type, source_prefi
     complete=len(covered)==expected and end<=dt.datetime.now(TZ).date() and not errors
     status="最终版" if complete else "暂定 · 数据尚不完整"
     days_list=("".join(f'<li>{x}</li>' for x in covered) if period_type=="daily" else "".join(f'<li><a href="../../daily/{dt.date.fromisoformat(x).year}/{dt.date.fromisoformat(x).month:02d}/{x}.html">{x}</a></li>' for x in covered))
-    missing=[(start+dt.timedelta(days=i)).isoformat() for i in range(expected) if (start+dt.timedelta(days=i)).isoformat() not in snapshots]
+    missing=[(start+dt.timedelta(days=i)).isoformat() for i in range(expected) if (start+dt.timedelta(days=i)).isoformat() not in snapshots or snapshots[(start+dt.timedelta(days=i)).isoformat()].get("note_only")]
     kpis=[("记录覆盖",f"{len(covered)} / {expected} 天"),("有日志正文",f"{len(note_days)} 天"),("Git 提交",len(commits)),("PR 事件",len(prs)),("CI 运行",len(runs)),("部署事件",len(deployments))]
     kpi_html="".join(f'<article><span>{esc(k)}</span><strong>{esc(v)}</strong></article>' for k,v in kpis)
     summary=[]
@@ -138,7 +138,7 @@ def report_content(days, snapshots, notes, start, end, period_type, source_prefi
     def event_rows(events,kind):
         if not events: return '<p class="muted">本周期暂无已采集事件。</p>'
         out=[]
-        for slug,item in events:
+        for slug,item in events[:25]:
             if kind=="commit": label=item.get("message","commit"); meta=item.get("sha","")
             elif kind=="pr": label=f"#{item.get('number')} {item.get('title')}"; meta=item.get("state","unknown")
             elif kind=="run": label=item.get("name","workflow"); meta=f"{item.get('status')} / {item.get('conclusion') or '未完成'}"
@@ -146,6 +146,7 @@ def report_content(days, snapshots, notes, start, end, period_type, source_prefi
                 sts=item.get("statuses",[]); state=sts[0].get("state") if sts else "无状态"
                 label=f"{item.get('environment','environment')} deployment"; meta=state
             out.append(f'<li><b>{esc(slug)}</b> · {link(item.get("url"),label)} <small>{esc(meta)}</small></li>')
+        if len(events)>25: out.append(f"<li class='muted'>仅展示最近 25 条；完整 {len(events)} 条原始事件保存在 data/github_activity 快照中。</li>")
         return "<ul class='events'>"+ "".join(out)+"</ul>"
     note_html=[]
     for d in note_days:
