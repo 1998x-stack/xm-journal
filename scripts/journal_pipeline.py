@@ -171,7 +171,8 @@ def main():
     parser.add_argument("--date",help="Asia/Shanghai date YYYY-MM-DD; defaults to today")
     parser.add_argument("--skip-github",action="store_true")
     args=parser.parse_args()
-    today=dt.date.fromisoformat(args.date) if args.date else dt.datetime.now(TZ).date()\n    current_day=dt.datetime.now(TZ).date()
+    today=dt.date.fromisoformat(args.date) if args.date else dt.datetime.now(TZ).date()
+    current_day=dt.datetime.now(TZ).date()
     registry=read_json(ROOT/"config/projects.json",{"repositories":[]})
     snapshots_dir=ROOT/"data/github_activity"; snapshots_dir.mkdir(parents=True,exist_ok=True)
     snapshot_path=snapshots_dir/f"{today.isoformat()}.json"
