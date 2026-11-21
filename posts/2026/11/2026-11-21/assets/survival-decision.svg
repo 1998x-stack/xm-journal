@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 520" role="img" aria-labelledby="decision-title decision-desc">
+<title id="decision-title">先判断胜算，再决定进攻或撤退</title>
+<desc id="decision-desc">决策起点是先确认最重要的目标和生存底线；有胜算时选择交战，没有胜算时选择撤退，核心原则是先保住生存。</desc>
+<rect width="920" height="520" rx="24" fill="#f4f6f2"/>
+<text x="460" y="58" text-anchor="middle" font-family="system-ui,'PingFang SC','Microsoft YaHei',sans-serif" font-size="20" letter-spacing="3" fill="#53676d">A SIMPLE DECISION RULE</text>
+<rect x="250" y="88" width="420" height="82" rx="16" fill="#fff" stroke="#147f80" stroke-width="2"/>
+<text x="460" y="123" text-anchor="middle" font-family="system-ui,'PingFang SC','Microsoft YaHei',sans-serif" font-size="27" font-weight="700" fill="#203035">先问：最重要的是什么？</text>
+<text x="460" y="151" text-anchor="middle" font-family="system-ui,'PingFang SC','Microsoft YaHei',sans-serif" font-size="18" fill="#53676d">先把生存和全局目标放在前面</text>
+<path d="M460 170 V220 M460 220 H230 V260 M460 220 H690 V260" fill="none" stroke="#84998c" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M230 260 l-9 -14 h18 z M690 260 l-9 -14 h18 z" fill="#84998c"/>
+<g font-family="system-ui,'PingFang SC','Microsoft YaHei',sans-serif" text-anchor="middle">
+  <rect x="70" y="270" width="320" height="112" rx="16" fill="#e5f2ed" stroke="#147f80" stroke-width="2"/>
+  <text x="230" y="310" font-size="28" font-weight="700" fill="#176d68">有胜算 / 打得过</text>
+  <text x="230" y="347" font-size="22" fill="#35584b">选择交战</text>
+  <rect x="530" y="270" width="320" height="112" rx="16" fill="#fff0e6" stroke="#d06d4d" stroke-width="2"/>
+  <text x="690" y="310" font-size="28" font-weight="700" fill="#a45437">无胜算 / 打不过</text>
+  <text x="690" y="347" font-size="22" fill="#8b5936">选择撤退</text>
+  <path d="M230 382 V420 H460 M690 382 V420 H460 V438" fill="none" stroke="#84998c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="245" y="438" width="430" height="54" rx="14" fill="#203b36"/>
+  <text x="460" y="473" font-size="25" font-weight="700" fill="#fff">先活下来，才有下一步</text>
+</g>
+</svg>
