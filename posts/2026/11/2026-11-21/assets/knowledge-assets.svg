@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 600" role="img" aria-labelledby="knowledge-title knowledge-desc">
+<title id="knowledge-title">把过去学过的内容转化为长期知识资产</title>
+<desc id="knowledge-desc">从现有 GitHub 教程仓库和大学课程资料开始，经过分类整理、脚本批量处理、Skill 转换，逐步形成可复用的教程仓库。后续建设仍是计划。</desc>
+<rect width="920" height="600" rx="24" fill="#f7f5ef"/>
+<text x="62" y="62" font-family="system-ui,'PingFang SC','Microsoft YaHei',sans-serif" font-size="20" letter-spacing="3" fill="#716d61">FROM OLD NOTES TO REUSABLE KNOWLEDGE</text>
+<g stroke="#b6aa91" stroke-width="4" fill="none" stroke-linecap="round">
+  <path d="M460 160 V190 M460 270 V300 M460 380 V410 M460 490 V520"/>
+</g>
+<g font-family="system-ui,'PingFang SC','Microsoft YaHei',sans-serif" text-anchor="middle">
+  <g><rect x="150" y="92" width="620" height="68" rx="15" fill="#fff" stroke="#cfc5af" stroke-width="2"/><text x="460" y="121" font-size="26" font-weight="700" fill="#343a35">已有 GitHub 教程 + 大学课程</text><text x="460" y="146" font-size="18" fill="#6b7067">微积分 · 线性代数 · 其他教程类内容</text></g>
+  <g><rect x="150" y="202" width="620" height="68" rx="15" fill="#fff" stroke="#cfc5af" stroke-width="2"/><text x="460" y="231" font-size="26" font-weight="700" fill="#343a35">分类整理</text><text x="460" y="256" font-size="18" fill="#6b7067">先识别内容，再建立清晰目录和主题边界</text></g>
+  <g><rect x="150" y="312" width="620" height="68" rx="15" fill="#fffaf0" stroke="#d8bd83" stroke-width="2"/><text x="460" y="341" font-size="26" font-weight="700" fill="#74571e">编写批量处理脚本（计划）</text><text x="460" y="366" font-size="18" fill="#8c7448">减少逐条导入、重复转换的手工操作</text></g>
+  <g><rect x="150" y="422" width="620" height="68" rx="15" fill="#f3f0ff" stroke="#c9c1e8" stroke-width="2"/><text x="460" y="451" font-size="26" font-weight="700" fill="#51458c">使用 Skill 逐批转换</text><text x="460" y="476" font-size="18" fill="#6f659b">把原有内容变成结构化、可阅读的教程</text></g>
+  <g><rect x="150" y="532" width="620" height="52" rx="15" fill="#edf5ed" stroke="#a8c0ad" stroke-width="2"/><text x="460" y="566" font-size="26" font-weight="700" fill="#35584b">可持续维护的个人知识资产</text></g>
+</g>
+</svg>
