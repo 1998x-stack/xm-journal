@@ -34,6 +34,10 @@
     .todo-list { padding-left: 1.25rem; }
     .todo-list li { margin: .7rem 0; }
     .small-note { color: var(--subtle); font-size: .9rem; }
+    .diagram-scroll { max-width: 100%; overflow-x: auto; overflow-y: hidden; scrollbar-width: thin; }
+    .diagram-scroll:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+    .diagram-scroll img { display: block; width: 100%; max-width: 100%; height: auto; }
+    @media(max-width:900px) { .diagram-scroll img { width: 640px; max-width: none; } }
     @media(max-width:700px) { .moment-grid { grid-template-columns: 1fr; } }
     @media(max-width:520px) { .contrast-grid { grid-template-columns: 1fr; } }
   </style>
@@ -64,7 +68,7 @@
         <h2 id="opening-heading">今天的主线：少做表面扩张，把重要的东西留下来</h2>
         <p>早上讲题时，我再次确认，题目不是做得越多越好；晚上看着自己过去积累的 GitHub 仓库，我又想到，学过的东西如果没有被整理和保存，时间久了就容易忘掉。玩游戏时，“先活下来”也让我想到，任何行动都应该先知道自己最需要守住什么。</p>
         <figure class="hero-figure">
-          <img src="assets/cover.svg" alt="守住核心、做深关键部分、记录过程并形成可复用资产的四步路径">
+          <div class="diagram-scroll" role="region" tabindex="0" aria-label="核心价值四步路径，可横向滚动查看"><img src="assets/cover.svg" alt="守住核心、做深关键部分、记录过程并形成可复用资产的四步路径"></div>
           <figcaption>这是对今天几段经历的编辑性归纳：先守住核心，再深入关键部分，把过程留下来，最后让它能够重复产生价值。</figcaption>
         </figure>
         <div class="moment-grid">
@@ -90,17 +94,17 @@
         <p>上课时我想到，应该打开手机录音，把课堂过程记录下来。以后每节课都可以在合适的前提下录音，再把内容整理出来。这样，课堂里的讲解、学生容易卡住的地方、典型题型和证明路径，就有机会变成可以回看、修改和复用的材料。</p>
         <p>今天还没有真正建立录音与整理流程，这仍然是一项准备启动的计划。尤其是课堂录音，需要先确认参与者知情，以及录音内容的保存和使用边界。</p>
         <figure>
-          <img src="assets/teaching-assets.svg" alt="从识别关键题型、深入讲解，到计划录音、课后整理并形成可复用教学材料的流程">
+          <div class="diagram-scroll" role="region" tabindex="0" aria-label="教学资产化流程图，可横向滚动查看"><img src="assets/teaching-assets.svg" alt="从识别关键题型、深入讲解，到计划录音、课后整理并形成可复用教学材料的流程"></div>
           <figcaption>把一次教学转化为长期素材的路径。录音和整理是下一步计划，不代表今天已经完成。</figcaption>
         </figure>
       </section>
 
       <section id="knowledge" aria-labelledby="knowledge-heading">
         <h2 id="knowledge-heading">03 · 知识整理：过去学过的东西，也应该成为自己的资产</h2>
-        <p>中午休息和吃饭之后，我把数学题目逐个导入 ChatGPT，让它们分别生成相应内容。手工一题一题输入，速度实在太慢了。我需要认真设计脚本，把重复的导入和转换过程自动化，而不是每次从头手工操作。</p>
+        <p>两节课之后，我去按摩、睡了一会儿；吃过午饭后，我把数学题目逐个导入 ChatGPT，让它们分别生成相应内容。手工一题一题输入，速度实在太慢了。我需要认真设计脚本，把重复的导入和转换过程自动化，而不是每次从头手工操作。</p>
         <p>晚上回家后，我又想到自己已有的 GitHub 仓库。尤其是教程类项目，应该逐个分类整理。大学里学过的微积分、线性代数等课程，也可以逐步建设成独立的教程仓库，再用相应的 Skill 转换和完善。</p>
         <figure>
-          <img src="assets/knowledge-assets.svg" alt="从已有教程仓库和大学课程开始，经过分类、脚本批量处理和 Skill 转换，形成可维护的个人知识资产">
+          <div class="diagram-scroll" role="region" tabindex="0" aria-label="知识资产形成流程图，可横向滚动查看"><img src="assets/knowledge-assets.svg" alt="从已有教程仓库和大学课程开始，经过分类、脚本批量处理和 Skill 转换，形成可维护的个人知识资产"></div>
           <figcaption>这是一条准备逐步建立的知识资产流水线：先分类，再脚本化处理，最后分批转换和沉淀。</figcaption>
         </figure>
 
@@ -137,7 +141,7 @@
         <p>玩《和平精英》时，我想到一个很简单的原则：首先要保证自己活着。打得过就打，打不过就跑。只有先活下来，才有机会观察局势、等待下一次机会，并把后面的行动继续下去。</p>
         <p>这句话真正难的地方，不在于记住它，而在于每次遇到冲突时都能执行它。人容易被眼前的对手、目标或情绪牵着走，忘了先判断自己最需要保护的东西是什么。</p>
         <figure>
-          <img src="assets/survival-decision.svg" alt="先确认最重要的目标和生存底线，再根据胜算决定交战或撤退">
+          <div class="diagram-scroll" role="region" tabindex="0" aria-label="根据胜算决定进攻或撤退的流程图，可横向滚动查看"><img src="assets/survival-decision.svg" alt="先确认最重要的目标和生存底线，再根据胜算决定交战或撤退"></div>
           <figcaption>把“打得过就打，打不过就跑”拆成一个行动前的判断：先看局势与胜算，再决定进退。</figcaption>
         </figure>
         <p>我想把这种判断训练成行动习惯：先看清全局和自己的优势，再决定投入多少；不因为一时想赢，就把最重要的东西押上去。</p>
