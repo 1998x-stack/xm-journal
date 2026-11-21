@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 600" role="img" aria-labelledby="teach-title teach-desc">
+<title id="teach-title">从一次课堂到可复用的教学材料</title>
+<desc id="teach-desc">教学资产化路径：识别关键题型、深入讲透、在知情和使用边界明确后录音、课后整理，逐步形成可复用的教学材料。录音与整理是未来计划。</desc>
+<rect width="920" height="600" rx="24" fill="#f3f9f6"/>
+<text x="62" y="62" font-family="system-ui,'PingFang SC','Microsoft YaHei',sans-serif" font-size="20" letter-spacing="3" fill="#53676d">TEACHING ASSET PIPELINE</text>
+<path d="M135 132 V500" stroke="#b7d2c7" stroke-width="5" stroke-linecap="round"/>
+<g font-family="system-ui,'PingFang SC','Microsoft YaHei',sans-serif">
+  <g><circle cx="135" cy="145" r="25" fill="#147f80"/><text x="135" y="153" text-anchor="middle" font-size="20" font-weight="700" fill="white">1</text><rect x="190" y="108" width="650" height="74" rx="14" fill="#fff" stroke="#b7d2c7" stroke-width="2"/><text x="222" y="140" font-size="26" font-weight="700" fill="#203035">识别关键题型</text><text x="222" y="166" font-size="18" fill="#53676d">数形结合压轴题 · 立体几何证明</text></g>
+  <g><circle cx="135" cy="238" r="25" fill="#147f80"/><text x="135" y="246" text-anchor="middle" font-size="20" font-weight="700" fill="white">2</text><rect x="190" y="201" width="650" height="74" rx="14" fill="#fff" stroke="#b7d2c7" stroke-width="2"/><text x="222" y="233" font-size="26" font-weight="700" fill="#203035">把少数题型讲透</text><text x="222" y="259" font-size="18" fill="#53676d">条件、图形关系、证明思路与解题路径</text></g>
+  <g><circle cx="135" cy="331" r="25" fill="#d06d4d"/><text x="135" y="339" text-anchor="middle" font-size="20" font-weight="700" fill="white">3</text><rect x="190" y="294" width="650" height="74" rx="14" fill="#fffaf5" stroke="#e4c2a8" stroke-width="2"/><text x="222" y="326" font-size="26" font-weight="700" fill="#8b5936">课堂录音（计划）</text><text x="222" y="352" font-size="18" fill="#8b735f">先确认参与者知情与录音使用边界</text></g>
+  <g><circle cx="135" cy="424" r="25" fill="#d06d4d"/><text x="135" y="432" text-anchor="middle" font-size="20" font-weight="700" fill="white">4</text><rect x="190" y="387" width="650" height="74" rx="14" fill="#fffaf5" stroke="#e4c2a8" stroke-width="2"/><text x="222" y="419" font-size="26" font-weight="700" fill="#8b5936">课后整理（计划）</text><text x="222" y="445" font-size="18" fill="#8b735f">转写、知识点、典型题型和解题过程</text></g>
+  <g><circle cx="135" cy="517" r="25" fill="#7461ba"/><text x="135" y="525" text-anchor="middle" font-size="20" font-weight="700" fill="white">5</text><rect x="190" y="480" width="650" height="74" rx="14" fill="#f7f4ff" stroke="#c9c1e8" stroke-width="2"/><text x="222" y="512" font-size="26" font-weight="700" fill="#51458c">形成可复用教学材料</text><text x="222" y="538" font-size="18" fill="#6f659b">让一次讲解成为以后还能使用的内容</text></g>
+</g>
+</svg>
