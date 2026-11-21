@@ -1,0 +1,83 @@
+{
+  "source": {
+    "id": "voice-2026-11-21",
+    "type": "user-provided spoken reflection",
+    "date": "2026-11-21",
+    "description": "整理自用户在本轮对话中提供的 2026-11-21 中文语音转写。未使用外部资料；仅删除无意义口头重复，并按主题重组。"
+  },
+  "claims": [
+    {
+      "id": "morning-start",
+      "kind": "user-statement",
+      "claim": "用户早上约 7:30 起床出发，早餐吃了汉堡，并想到如果时间更早可以吃鸡蛋。",
+      "source_id": "voice-2026-11-21"
+    },
+    {
+      "id": "two-morning-classes",
+      "kind": "user-statement",
+      "claim": "上午上了两节课，整体讲解感觉不错且比较深入。",
+      "source_id": "voice-2026-11-21"
+    },
+    {
+      "id": "math-visualization",
+      "kind": "user-statement",
+      "claim": "课堂涉及数形结合的填空压轴题，用户认为这是不少学生的难点。",
+      "source_id": "voice-2026-11-21"
+    },
+    {
+      "id": "solid-geometry-proof",
+      "kind": "user-statement",
+      "claim": "用户对另一位学生的立体几何重点讲解证明题，尤其希望把第一题的证明思路讲透。",
+      "source_id": "voice-2026-11-21"
+    },
+    {
+      "id": "deep-teaching",
+      "kind": "user-statement",
+      "claim": "用户认为与其广泛做很多题，不如把少数题目和题型讲透、做透。",
+      "source_id": "voice-2026-11-21"
+    },
+    {
+      "id": "class-recording-plan",
+      "kind": "user-statement",
+      "claim": "用户希望以后用手机录下课堂过程，再整理课堂内容；这在本次口述中是计划，不是已完成的流程。",
+      "source_id": "voice-2026-11-21"
+    },
+    {
+      "id": "manual-math-import",
+      "kind": "user-statement",
+      "claim": "用户将数学题目逐个导入 ChatGPT 生成内容，并认为手工操作速度较慢，需要编写脚本。",
+      "source_id": "voice-2026-11-21"
+    },
+    {
+      "id": "swimming",
+      "kind": "user-statement",
+      "claim": "用户去了复旦并安排游泳，感到开心、舒服和自由，希望提前准备游泳装备。",
+      "source_id": "voice-2026-11-21"
+    },
+    {
+      "id": "tutorial-repositories",
+      "kind": "user-statement",
+      "claim": "用户希望分类整理已有 GitHub 教程类仓库，并把微积分、线性代数等大学课程逐步建设成教程仓库，使用 Skill 转换内容。",
+      "source_id": "voice-2026-11-21"
+    },
+    {
+      "id": "survival-principle",
+      "kind": "user-statement",
+      "claim": "用户从《和平精英》中提炼出优先保证生存、打得过就打、打不过就撤退的策略原则。",
+      "source_id": "voice-2026-11-21"
+    },
+    {
+      "id": "tomorrow-plan",
+      "kind": "user-statement",
+      "claim": "用户计划第二天去菜市场买食材、烤羊排和炒菜、游泳、去公司打卡，并继续写脚本整理教程。",
+      "source_id": "voice-2026-11-21"
+    },
+    {
+      "id": "core-value-model",
+      "kind": "editorial-synthesis",
+      "claim": "守住核心、做深关键部分、留下可复用成果、减少重复劳动，是对当天教学、知识整理和游戏策略的共同归纳。",
+      "source_id": "voice-2026-11-21",
+      "notes": "编辑性归纳，不是用户逐字提出的固定模型；文章明确标注为对多段经历的总结。"
+    }
+  ]
+}
