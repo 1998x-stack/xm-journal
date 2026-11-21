@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 620" role="img" aria-labelledby="cover-title cover-desc">
+<title id="cover-title">先保住核心，再把事情做深</title>
+<desc id="cover-desc">四个连续步骤：守住真正重要的目标，把关键部分做深，把过程记录下来，最后形成可复用的长期资产。</desc>
+<defs>
+  <linearGradient id="cover-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#edf3ec"/><stop offset="1" stop-color="#f7e9d9"/></linearGradient>
+  <linearGradient id="cover-line" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#147f80"/><stop offset="1" stop-color="#d06d4d"/></linearGradient>
+</defs>
+<rect width="920" height="620" rx="28" fill="url(#cover-bg)"/>
+<circle cx="800" cy="110" r="110" fill="#fffdf9" opacity=".55"/>
+<circle cx="105" cy="535" r="95" fill="#fffdf9" opacity=".45"/>
+<text x="72" y="78" font-family="system-ui,'PingFang SC','Microsoft YaHei',sans-serif" font-size="20" letter-spacing="5" fill="#62796e">A DAY OF TEACHING, LEARNING &amp; DECISIONS</text>
+<path d="M155 160 V485" fill="none" stroke="url(#cover-line)" stroke-width="7" stroke-linecap="round"/>
+<g font-family="system-ui,'PingFang SC','Microsoft YaHei',sans-serif">
+  <g><circle cx="155" cy="175" r="30" fill="#147f80"/><text x="155" y="184" text-anchor="middle" font-size="24" font-weight="700" fill="#fff">1</text><rect x="210" y="135" width="625" height="80" rx="18" fill="#fffdf9" stroke="#b7d2c7" stroke-width="2"/><text x="246" y="171" font-size="29" font-weight="700" fill="#203035">先保住核心</text><text x="246" y="197" font-size="18" fill="#53676d">先判断什么最值得保护</text></g>
+  <g><circle cx="155" cy="278" r="30" fill="#147f80"/><text x="155" y="287" text-anchor="middle" font-size="24" font-weight="700" fill="#fff">2</text><rect x="210" y="238" width="625" height="80" rx="18" fill="#fffdf9" stroke="#b7d2c7" stroke-width="2"/><text x="246" y="274" font-size="29" font-weight="700" fill="#203035">把关键部分做深</text><text x="246" y="300" font-size="18" fill="#53676d">少做题型堆积，多讲透推理</text></g>
+  <g><circle cx="155" cy="381" r="30" fill="#d06d4d"/><text x="155" y="390" text-anchor="middle" font-size="24" font-weight="700" fill="#fff">3</text><rect x="210" y="341" width="625" height="80" rx="18" fill="#fffdf9" stroke="#e4c2a8" stroke-width="2"/><text x="246" y="377" font-size="29" font-weight="700" fill="#203035">把过程记录下来</text><text x="246" y="403" font-size="18" fill="#53676d">让课堂和学习不止发生一次</text></g>
+  <g><circle cx="155" cy="484" r="30" fill="#d06d4d"/><text x="155" y="493" text-anchor="middle" font-size="24" font-weight="700" fill="#fff">4</text><rect x="210" y="444" width="625" height="80" rx="18" fill="#fffdf9" stroke="#e4c2a8" stroke-width="2"/><text x="246" y="480" font-size="29" font-weight="700" fill="#8b5936">形成可复用资产</text><text x="246" y="506" font-size="18" fill="#8b735f">整理、自动化，再持续积累</text></g>
+</g>
+<text x="460" y="580" text-anchor="middle" font-family="system-ui,'PingFang SC','Microsoft YaHei',sans-serif" font-size="17" fill="#71877b">今天的经历所指向的一条共同主线</text>
+</svg>
