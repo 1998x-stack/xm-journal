@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="journal:date" content="2026-11-23">
+<meta name="journal:title" content="把入口放在行动之前">
+<meta name="journal:summary" content="早晨想用音频代替无意识刷视频，白天反思代码与系统的底层逻辑，晚上又沉浸游戏。今天想弄清楚的，是怎样提前设计入口，让注意力真正转向理解和行动。">
+<meta name="journal:category" content="reflection">
+<meta name="journal:category-label" content="复盘与思考">
+<meta name="journal:tags" content="reflection, habits, attention, learning, ai, visualization, work">
+<meta name="journal:cover" content="assets/cover.svg">
+<meta name="journal:cover-alt" content="手机打开后两条不同的注意力路径：一条不断滑动视频，一条预先准备音频、自己复述并尝试验证理解">
+<title>把入口放在行动之前 · 2026.11.23</title>
+<link rel="stylesheet" href="../../../../skills/olah-style-journal/assets/css/article.css">
+<style>
+  :root { --paper:#fbfaf6; --ink:#26363d; --subtle:#596a6e; --accent:#1b6d6b; --surface:#f1f5f1; --border:#dbe4dc; }
+  .article-header .eyebrow { margin:0 0 1.2rem; color:#9e684b; font-size:.78rem; font-weight:750; letter-spacing:.18em; }
+  .article-header h1 { max-width:780px; letter-spacing:-.035em; }
+  .article-header .dek { max-width:730px; }
+  .hero-figure { padding:0; border:0; background:transparent; }
+  .hero-figure img { border-radius:18px; }
+  .hero-figure figcaption { border-top:0; padding:.5rem 0; }
+  .lead { font-size:1.14rem; line-height:1.9; }
+  .kicker { font-size:.82rem; font-weight:800; letter-spacing:.11em; color:#a66e4d; text-transform:uppercase; }
+  .pull-quote { margin:2.3rem 0; border-left:4px solid #d1a87a; padding:.8rem 1.35rem; color:#324c50; font-size:clamp(1.2rem,2.8vw,1.5rem); font-weight:650; line-height:1.6; background:#f8f2e9; border-radius:0 12px 12px 0; }
+  .dayline { border-top:1px solid var(--border); border-bottom:1px solid var(--border); margin:2.4rem 0; padding:1.2rem 0; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1.3rem; }
+  .dayline div { min-width:0; }
+  .dayline strong { display:block; color:var(--accent); font-size:.79rem; letter-spacing:.04em; }
+  .dayline p { font-size:.93rem; margin:.25rem 0 0; line-height:1.55; }
+  .diagram-scroll { max-width:100%; overflow-x:auto; overflow-y:hidden; }
+  .diagram-scroll:focus-visible { outline:3px solid var(--accent); outline-offset:3px; }
+  .diagram-scroll img { display:block; width:100%; height:auto; }
+  .flow-figure { background:#f4f1eb; }
+  .stepper-wrap { margin:2.3rem 0; padding:1.2rem; border:1px solid var(--border); background:#f6f8f4; border-radius:16px; }
+  .stepper-wrap h3 { margin:0 0 .45rem; font-size:1.22rem; }
+  .stepper-wrap .guide { font-size:.92rem; color:var(--subtle); margin:.2rem 0 1rem; }
+  .control-row { margin:.65rem 0 1.2rem; }
+  .control-row button { font-size:.85rem; padding:.52rem .82rem; }
+  .step-panel { border-left:3px solid #b9a3cf; padding:.3rem 1rem; background:#fff; border-radius:0 9px 9px 0; min-height:115px; }
+  .step-panel[hidden] { display:none; }
+  .step-panel h4 { font-size:1.03rem; margin:.2rem 0 .4rem; }
+  .step-panel p { margin:.2rem 0; font-size:.96rem; }
+  .boundary { font-size:.9rem; color:var(--subtle); border-top:1px solid var(--border); margin-top:1.2rem; padding-top:.75rem; }
+  .actions { padding-left:1.25rem; }
+  .actions li { margin:.75rem 0; }
+  .closing { background:#f8f2e9; padding:1.4rem; border-radius:14px; border:1px solid #ecdfca; }
+  @media(max-width:900px) { .diagram-scroll img { min-width:700px; max-width:none; } }
+  @media(max-width:650px) { .dayline { grid-template-columns:1fr; gap:.8rem; } .stepper-wrap { padding:.8rem; } .article-header h1 { font-size:clamp(2.15rem,11vw,3.4rem); } }
+  @media print { .diagram-scroll { overflow:visible; } .diagram-scroll img { min-width:0!important; width:100%!important; } .stepper-wrap { break-inside:avoid; } }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#content">跳转至正文</a>
+<div class="layout">
+<nav class="toc" aria-label="文章目录">
+  <strong>2026.11.23 · 个人日志</strong>
+  <a href="#opening">今天的分岔</a>
+  <a href="#morning">早晨的入口</a>
+  <a href="#attention">白天的注意力</a>
+  <a href="#systems">看得见的系统</a>
+  <a href="#skill-store">Skill Store 设计</a>
+  <a href="#evening">家常饭与游戏</a>
+  <a href="#next">准备下一步</a>
+</nav>
+<main id="content">
+<article>
+<header class="article-header">
+  <p class="eyebrow">MONDAY / 23 NOVEMBER 2026 · DAILY REFLECTION</p>
+  <h1>把入口放在行动之前</h1>
+  <p class="dek">早晨想用听书和复述替代随手刷视频，白天想把代码与架构真正想清楚，晚上又抱着电脑玩起游戏。今天让我在意的，不是自己没有任何想法，而是很多好想法还没有变成顺手可执行的下一步。</p>
+</header>
+
+<section id="opening" aria-labelledby="opening-title">
+  <p class="kicker">The question</p>
+  <h2 id="opening-title">同一次打开手机，为什么会走向不同的地方？</h2>
+  <p class="lead">今天在公司看了不少视频和抖音。我并不是不知道自己更想做什么：早晨听音频、复述知识、理解项目的底层逻辑，这些想法其实都很明确。但真正打开手机、打开电脑时，下一步常常被更容易进入的内容接管。</p>
+  <figure class="hero-figure">
+    <div class="diagram-scroll" role="region" aria-label="注意力入口的两条路径，窄屏可左右滚动" tabindex="0">
+      <img src="assets/cover.svg" alt="同一次打开手机，一条路径是没有准备而继续刷视频；另一条计划路径是提前选择音频、用自己的话复述并尝试检验理解">
+    </div>
+    <figcaption>这张图不是对习惯已改变的宣告，而是对今天矛盾的一种编辑性解释：我希望让“提前准备好的行动”比“随手消耗的内容”更容易开始。</figcaption>
+  </figure>
+  <div class="dayline" aria-label="一天的三个片段">
+    <div><strong>早晨 · 想法</strong><p>听书、按摩脸和眼睛、准备好更舒服的出门节奏。</p></div>
+    <div><strong>白天 · 摩擦</strong><p>刷视频、犯困；喝咖啡和短暂休息后继续执行代码。</p></div>
+    <div><strong>晚上 · 对照</strong><p>自己做的蛋炒饭很满意，之后又沉浸在游戏里。</p></div>
+  </div>
+  <p>如果把这些片段连起来看，我想尝试改变的并不是某一个 App，而是<strong>行动开始之前，默认会遇到什么</strong>。这个共同点是我对一天经历的归纳，并非已经证实的行为规律。</p>
+</section>
+
+<section id="morning" aria-labelledby="morning-title">
+  <p class="kicker">01 / A prepared morning</p>
+  <h2 id="morning-title">早晨：让听见的知识有机会变成自己的话</h2>
+  <p>起来后，我先吃了昨天的剩菜，再准备去公司。出门前如果能按摩一下脸和眼睛、喷点香水，我觉得会更好。这些小事不复杂，但很容易在匆忙中被忽略。</p>
+  <p>更重要的念头是听音频。比如得到听书一类内容，我希望早上起来就能播放，并在听完后用自己的语言表达一遍，而不只是把声音当背景。</p>
+  <p>我想到两个可能的入口：把音频放到手机 App 里，或者先搭一个自己的网站。网站如果能调整播放倍速，也许就能先把最小的听书流程跑起来。今天只是提出了方向，还没有决定最终用哪一种方案。</p>
+  <div class="pull-quote">“听过了”与“能够自己讲出来”，中间还有一步需要我亲自完成。</div>
+</section>
+
+<section id="attention" aria-labelledby="attention-title">
+  <p class="kicker">02 / Friction</p>
+  <h2 id="attention-title">白天：注意力和精力，都是有限的</h2>
+  <p>到公司后，有一段时间一直刷视频。我对自己这种状态感到不满意，并联想到：要是想听的音频早就准备好，至少会多一个容易开启的替代选择。</p>
+  <p>上午我也比较困。我觉得和前一天睡得晚有关，后来下楼喝了咖啡，状态好了一些；趴在桌上眯了一会儿后，再继续执行代码。至于睡眠、刷视频与工作状态究竟怎样相互影响，单凭今天的一段经历还不能下定论。</p>
+  <div class="stepper-wrap" data-stepper-root>
+    <h3>把“打开设备以后”拆成三个状态</h3>
+    <p class="guide">依次选择，观察当天发生的事与准备尝试的改变之间的区别。核心关系在本节文字与封面图中也可以独立读懂。</p>
+    <div class="control-row" data-stepper role="group" aria-label="注意力路径状态切换">
+      <button type="button" data-stage="actual" aria-pressed="true">实际发生：继续刷</button>
+      <button type="button" data-stage="prepare" aria-pressed="false">准备尝试：先选好</button>
+      <button type="button" data-stage="express" aria-pressed="false">学习目标：自己讲</button>
+    </div>
+    <div class="step-panel" data-panel="actual" role="status" aria-live="polite">
+      <h4>当时：打开视频后，继续看下去</h4>
+      <p>今天我确实花了时间刷短视频。它是一段真实经历，而不是对自己未来一定会怎样的预测。</p>
+    </div>
+    <div class="step-panel" data-panel="prepare" role="status" aria-live="polite" hidden>
+      <h4>下一步设想：把可播放的音频放在入口处</h4>
+      <p>提前选好内容，支持在手机上播放和调速。这样无需先搜索半天，就能开始一段计划好的输入。</p>
+    </div>
+    <div class="step-panel" data-panel="express" role="status" aria-live="polite" hidden>
+      <h4>真正想练习的：合上内容，用自己的话说</h4>
+      <p>不依赖原文解释一个观点，甚至用一个例子检验。它才是音频工具背后最重要的学习目的。</p>
+    </div>
+  </div>
+</section>
+
+<section id="systems" aria-labelledby="systems-title">
+  <p class="kicker">03 / Understanding the work</p>
+  <h2 id="systems-title">工作：页面可以生成，底层逻辑还得自己想清楚</h2>
+  <p>继续执行项目代码时，我意识到有两块地方需要认真梳理。第一是 UI：一个界面为什么这样设计，点击后状态怎么变，不同页面之间如何相互关联？第二是数据库：当前数据格式是什么，将来如何使用，哪些设计还需要调整？</p>
+  <p>我已经能够借助 AI 生成相关页面、代码、甚至 PDF 教程，但我不希望自己只停留在“看到了生成结果”。越是复杂的系统，越需要画出真实流程，逐个追问输入、状态、边界和错误是怎么发生的，再回到代码中验证图有没有画对。</p>
+  <p>开会时，我也想到要把重要信息记录下来，最好以后形成合规的会议录音与整理习惯。不过这次并没有真正养成。录音前还需要确认参与者知情、会议许可及内部资料的保存边界。</p>
+  <p>我还想建立工作笔记的 GitHub 仓库，逐步把适合公开或获得授权的知识整理成可视化页面。但仓库能否公开、哪些材料可以转换，仍需要先区分清楚。</p>
+</section>
+
+<section id="skill-store" aria-labelledby="skill-title">
+  <p class="kicker">04 / A system sketch</p>
+  <h2 id="skill-title">Skill Store：不要只画界面，要画请求究竟去了哪里</h2>
+  <p>今天想到的 Skill Store，按目前设想有三个主要位置：OpenCode Web 作为前端，Adapter 负责转接，OpenCode Server Plugin 提供服务能力。下载 Skill、Reload Skill 与校验是我关心的操作。但这些能力的精确接口、执行顺序、状态设计，还要再确认。</p>
+  <figure class="flow-figure">
+    <div class="diagram-scroll" role="region" aria-label="Skill Store 前端到服务插件的设计草图，窄屏可左右滚动" tabindex="0">
+      <img src="assets/skill-store-flow.svg" alt="待验证的 Skill Store 设计流程：OpenCode Web 发起请求，Adapter 转换，Server Plugin 执行校验、下载及 Reload 等能力，再反馈执行状态">
+    </div>
+    <figcaption>这是一张架构假设图，而非现有系统的已验证实现。蓝色表示用户界面，紫色表示转接，橙色表示服务能力；返回路径强调错误与状态同样需要被设计。</figcaption>
+  </figure>
+  <p>我下一步可以从一个最小例子开始，例如“下载一个 Skill”：请求字段有哪些？由谁做校验？完成下载以后是否、何时 Reload？出现问题要把什么状态反馈给前端？如果我不能解释这些关系，就说明设计仍然有没想清楚的地方。</p>
+  <p>因此，可视化不只是最后做个好看的图。它更像一次自我检查：让代码背后的假设暴露出来，然后拿实际执行结果去修正。</p>
+</section>
+
+<section id="evening" aria-labelledby="evening-title">
+  <p class="kicker">05 / Back home</p>
+  <h2 id="evening-title">晚上：做饭让我满意，游戏让我又看见旧问题</h2>
+  <p>下班回家后，菜已经切好了。我做了几个菜和蛋炒饭，觉得味道不错，也健康、便宜。比起总在外面吃饭，我想尽可能继续在家做菜。这是一件今天确实完成、也让我满意的小事。</p>
+  <p>但饭后我又抱着电脑玩游戏，一直玩到开始这次复盘。想到上午犯困，以及自己反复提出“早睡早起”，我意识到晚上依然有一个需要面对的拉扯：明明在意第二天的精力，却很容易让游戏占用原本想留给休息的时间。</p>
+  <p>今天我还没有真正解决它。也许下一次能做的不是临睡前再提醒自己，而是在开始游戏前就想清楚什么时候结束。这个做法是根据今天情况提出的尝试，不是我已经做到的习惯。</p>
+</section>
+
+<section id="next" aria-labelledby="next-title">
+  <p class="kicker">06 / The next small steps</p>
+  <h2 id="next-title">先把一个入口做好，再让它带出一次真实行动</h2>
+  <p>今天出现了不少计划。我不想因为列出的想法很多，就以为它们已经变成成果。更有价值的是先挑一个容易检验的起点：</p>
+  <ul class="actions">
+    <li><strong>音频：</strong>先做能在手机打开、能选内容和调倍速的最小播放入口，尝试听完后自己复述。</li>
+    <li><strong>系统理解：</strong>选一个 UI 交互，画出页面、状态与数据的关系；再检查数据库格式和真实代码。</li>
+    <li><strong>Skill Store：</strong>以单个下载场景核对 Web、Adapter、Server Plugin、校验和 Reload 的边界。</li>
+    <li><strong>记录与生活：</strong>在许可前提下准备会议记录；继续尽量在家做饭，并为早睡和减少深夜游戏预先做安排。</li>
+  </ul>
+  <p class="boundary">这些是从今天口述提炼出的待办方向，不代表相关播放器、架构设计、会议录音流程或作息习惯已经完成。</p>
+  <div class="closing"><p><strong>给自己的提醒：</strong>我不缺“应该做什么”的想法。下一步要练习的，是在注意力被带走之前，把入口准备好；在 AI 给出结果之后，仍然能亲自把它的逻辑讲清楚。</p></div>
+</section>
+</article>
+</main>
+</div>
+<script src="../../../../skills/olah-style-journal/assets/js/interactions.js"></script>
+</body>
+</html>
