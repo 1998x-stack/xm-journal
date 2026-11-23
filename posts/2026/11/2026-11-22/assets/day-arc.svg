@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 270" role="img" aria-labelledby="arc22title arc22desc">
+<title id="arc22title">十一月二十二日的一天</title>
+<desc id="arc22desc">从十点多起床、家务、公司文档和仓库工作，到傍晚六点半左右买菜做饭、晚饭后教程可视化和玩和平精英。未提供的具体时间不作推断。</desc>
+<rect width="980" height="270" rx="18" fill="#fff9f1"/>
+<text x="34" y="41" font-size="18" font-weight="700" fill="#67594d">这一天如何展开</text>
+<path d="M75 133H910" fill="none" stroke="#d4c8b8" stroke-width="5" stroke-linecap="round"/>
+<g font-family="system-ui, PingFang SC, Microsoft YaHei, sans-serif" text-anchor="middle">
+<circle cx="85" cy="133" r="15" fill="#ad6a4a"/><text x="85" y="98" font-size="17" font-weight="700" fill="#75452f">10 点多</text><text x="85" y="177" font-size="16" fill="#38474a">起床</text><text x="85" y="205" font-size="14" fill="#786c60">闹钟未奏效</text>
+<circle cx="252" cy="133" r="13" fill="#7a9d8d"/><text x="252" y="98" font-size="16" fill="#786c60">随后</text><text x="252" y="177" font-size="16" fill="#38474a">家务、吃饭</text><text x="252" y="205" font-size="14" fill="#786c60">拖地·整理·垃圾</text>
+<circle cx="419" cy="133" r="13" fill="#7a9d8d"/><text x="419" y="98" font-size="16" fill="#786c60">白天</text><text x="419" y="177" font-size="16" fill="#38474a">公司</text><text x="419" y="205" font-size="14" fill="#786c60">文档与仓库</text>
+<circle cx="586" cy="133" r="15" fill="#ad6a4a"/><text x="586" y="98" font-size="17" font-weight="700" fill="#75452f">约 18:30</text><text x="586" y="177" font-size="16" fill="#38474a">买菜、做饭</text><text x="586" y="205" font-size="14" fill="#786c60">提前准备</text>
+<circle cx="753" cy="133" r="13" fill="#7a9d8d"/><text x="753" y="98" font-size="16" fill="#786c60">饭后</text><text x="753" y="177" font-size="16" fill="#38474a">教程可视化</text><text x="753" y="205" font-size="14" fill="#786c60">继续转换</text>
+<circle cx="910" cy="133" r="15" fill="#465f70"/><text x="910" y="98" font-size="16" fill="#786c60">之后</text><text x="910" y="177" font-size="16" fill="#38474a">玩游戏</text><text x="910" y="205" font-size="14" fill="#786c60">感到愧疚</text>
+</g>
+<text x="34" y="246" fill="#918273" font-size="13">时间仅标注口述明确提到的节点；其余按顺序排列，并非等间隔计时。</text>
+</svg>
