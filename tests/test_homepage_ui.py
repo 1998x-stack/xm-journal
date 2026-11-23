@@ -12,10 +12,10 @@ ENTRIES = [
     ("2026-11-23", "reflection"),
     ("2026-11-21", "learning"),
     ("2026-11-17", "reflection"),
-    ("2026-11-16", "reflection"),
+    ("2026-11-16", "work"),
     ("2026-11-10", "learning"),
     ("2026-11-09", "reflection"),
-    ("2026-11-03", "work"),
+    ("2026-11-03", "reflection"),
     ("2026-10-30", "work"),
 ]
 
@@ -141,7 +141,10 @@ def test_sparse_week_and_responsive_layout(homepage):
     page = browser.new_page()
     page.goto(path.as_uri())
     page.locator("#category-filter").select_option("work")
-    assert visible_dates(page) == ["2026-11-03"]
+    assert visible_dates(page) == ["2026-11-16"]
+    page.locator("#page-older").click()
+    assert visible_dates(page) == []
+    assert "这七天还没有日志" in page.locator("#empty-state").inner_text()
     page.locator("#page-older").click()
     assert visible_dates(page) == ["2026-10-30"]
     page.close()
