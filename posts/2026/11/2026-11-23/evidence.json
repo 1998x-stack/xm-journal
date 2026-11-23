@@ -1,0 +1,108 @@
+{
+  "source": {
+    "id": "voice-2026-11-23",
+    "type": "user-provided transcript",
+    "date": "2026-11-23",
+    "description": "用户提供的 2026-11-23 中文日记口述转写。时间戳为转写进度，不是事件发生的钟点。未引用外部事实或其他仓库活动。"
+  },
+  "claims": [
+    {
+      "id": "morning-leftovers",
+      "kind": "user-statement",
+      "claim": "早晨起来后吃了昨天的剩菜，并去公司。",
+      "source_id": "voice-2026-11-23",
+      "transcript_range": "00:00–00:34"
+    },
+    {
+      "id": "morning-care",
+      "kind": "user-statement",
+      "claim": "希望起床后提前按摩脸和眼睛，并喷香水。",
+      "source_id": "voice-2026-11-23",
+      "transcript_range": "00:14–00:34"
+    },
+    {
+      "id": "audio-repeat",
+      "kind": "user-statement",
+      "claim": "想在早晨听得到等音频，并用自己的语言复述内容。",
+      "source_id": "voice-2026-11-23",
+      "transcript_range": "00:34–00:58"
+    },
+    {
+      "id": "audio-player-plan",
+      "kind": "user-statement",
+      "claim": "考虑把音频放进手机 App 或个人网站，并提供倍速播放；尚未说已完成。",
+      "source_id": "voice-2026-11-23",
+      "transcript_range": "00:34–01:29"
+    },
+    {
+      "id": "video-scrolling",
+      "kind": "user-statement",
+      "claim": "到公司后刷了不少视频和抖音，对此不满意。",
+      "source_id": "voice-2026-11-23",
+      "transcript_range": "00:58–01:09"
+    },
+    {
+      "id": "low-energy",
+      "kind": "user-statement",
+      "claim": "上午感到困倦，认为和前晚晚睡有关；喝咖啡、短暂趴睡后继续执行代码。",
+      "source_id": "voice-2026-11-23",
+      "transcript_range": "01:41–02:04"
+    },
+    {
+      "id": "ui-db",
+      "kind": "user-statement",
+      "claim": "想深入梳理项目 UI 之间的底层逻辑，以及数据库结构与数据格式。",
+      "source_id": "voice-2026-11-23",
+      "transcript_range": "02:04–02:39"
+    },
+    {
+      "id": "meeting-recording",
+      "kind": "user-statement",
+      "claim": "开会时想到录音，但尚未养成会议录音的习惯。",
+      "source_id": "voice-2026-11-23",
+      "transcript_range": "02:39–02:54"
+    },
+    {
+      "id": "notes-repo",
+      "kind": "user-statement",
+      "claim": "打算建立工作笔记 GitHub 仓库，并把部分项目知识转换成可视化页面。",
+      "source_id": "voice-2026-11-23",
+      "transcript_range": "02:54–03:18"
+    },
+    {
+      "id": "skill-store",
+      "kind": "user-statement",
+      "claim": "提及 Skill Store 的 OpenCode Web 前端、Adapter、Server Plugin 以及下载、Reload、校验等功能设计。",
+      "source_id": "voice-2026-11-23",
+      "transcript_range": "03:18–04:14"
+    },
+    {
+      "id": "ai-understanding",
+      "kind": "user-statement",
+      "claim": "认为自己需要理解网页、PDF 教程和代码背后的逻辑，不能只依赖 AI，可借助可视化理解。",
+      "source_id": "voice-2026-11-23",
+      "transcript_range": "03:59–04:14"
+    },
+    {
+      "id": "home-food-games",
+      "kind": "user-statement",
+      "claim": "下班回家做菜和蛋炒饭，认为在家做饭健康便宜；之后抱电脑玩游戏至复盘时。",
+      "source_id": "voice-2026-11-23",
+      "transcript_range": "04:14–04:54"
+    },
+    {
+      "id": "entry-design",
+      "kind": "editorial-synthesis",
+      "claim": "提前设计音频、会议记录、技术图解和睡前边界等行动入口，可能有助于减少临时决策带来的摩擦。",
+      "source_id": "voice-2026-11-23",
+      "notes": "编辑性解释和待尝试策略，不是用户证实的因果机制。"
+    },
+    {
+      "id": "learning-cycle",
+      "kind": "editorial-synthesis",
+      "claim": "将听或看、独立复述、图解和动手验证连接成学习闭环。",
+      "source_id": "voice-2026-11-23",
+      "notes": "从用户对音频复述、技术可视化与理解的多处表述归纳；并非已经建立的习惯。"
+    }
+  ]
+}
