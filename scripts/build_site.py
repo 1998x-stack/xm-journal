@@ -90,7 +90,7 @@ def render_post_card(post: dict[str, str]) -> str:
             f'alt="{escape(post.get("cover_alt", title), quote=True)}" loading="lazy"></div>'
         )
     return (
-        f'<article class="post-card" data-category="{category}" data-search="{search}">'
+        f'<article class="post-card" data-date="{date}" data-category="{category}" data-search="{search}">'
         f'<a class="post-card-link" href="{url}">{cover}'
         f'<div class="post-card-body"><div class="post-meta"><time datetime="{date}">{date}</time>'
         f'<span class="category-label">{category_label}</span></div>'

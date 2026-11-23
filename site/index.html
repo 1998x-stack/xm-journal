@@ -30,21 +30,50 @@
           <h2 id="library-title">每天一篇，慢慢看见自己</h2>
           <p class="library-intro">目前收录 <strong id="post-count">{{POST_COUNT}}</strong> 篇视觉日志。每一篇都从当天真实的口述出发。</p>
         </div>
-        <div class="filters">
+      </div>
+
+      <div class="filters" role="search" aria-label="筛选每日视觉日志">
+        <div class="filter-field filter-search">
           <label class="search-label" for="search-input">搜索日志</label>
-          <input id="search-input" type="search" placeholder="搜索主题、感悟或关键词…" autocomplete="off">
+          <input id="search-input" type="search" placeholder="主题、感悟或关键词…" autocomplete="off">
+        </div>
+        <div class="filter-field">
           <label class="search-label" for="category-filter">主题</label>
           <select id="category-filter">
             <option value="">全部主题</option>
             {{CATEGORY_OPTIONS}}
           </select>
         </div>
+        <div class="filter-field">
+          <label class="search-label" for="date-from">开始日期</label>
+          <input id="date-from" type="date" aria-label="筛选开始日期">
+        </div>
+        <div class="filter-field">
+          <label class="search-label" for="date-to">结束日期</label>
+          <input id="date-to" type="date" aria-label="筛选结束日期">
+        </div>
+        <button type="button" id="reset-filters" class="reset-filters">清除筛选</button>
+      </div>
+
+      <div class="results-heading">
+        <p id="results-summary" class="results-summary" role="status" aria-live="polite">按最新日期排序 · 每页展示连续 7 天</p>
+        <span class="sort-hint">最新日期优先</span>
       </div>
 
       <div class="post-grid" id="post-grid">
         {{POST_CARDS}}
       </div>
-      <p class="empty-state" id="empty-state" hidden>没有找到匹配的日志，试试其他关键词。</p>
+      <p class="empty-state" id="empty-state" hidden>没有找到匹配的日志，请调整筛选条件。</p>
+
+      <nav id="pagination" class="pagination" aria-label="按七天时间段翻页" hidden>
+        <button type="button" id="page-newer" aria-label="上一页，查看较新的七天">← 上一页 · 较新</button>
+        <div class="pagination-position">
+          <strong id="page-indicator">第 1 页</strong>
+          <span id="page-range">每页连续 7 天</span>
+        </div>
+        <button type="button" id="page-older" aria-label="下一页，查看更早的七天">下一页 · 更早 →</button>
+      </nav>
+      <noscript><p class="no-script-note">开启 JavaScript 后可按主题、日期和关键词筛选，并以七天为一页翻看。当前按最新日期展示全部日志。</p></noscript>
     </section>
 
     <section class="manifesto" aria-labelledby="manifesto-title">
