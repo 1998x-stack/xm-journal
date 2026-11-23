@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" role="img" aria-labelledby="cover22title cover22desc">
+<title id="cover22title">厨房有准备，夜晚如何收尾？</title>
+<desc id="cover22desc">画面左侧为事先摆好材料的暖色厨房，右侧为循环往复的夜间游戏界面。两种节奏形成对照，但不把游戏和愧疚简单当作必然因果。</desc>
+<rect width="960" height="480" rx="24" fill="#f6ead8"/>
+<rect x="495" y="0" width="465" height="480" rx="24" fill="#263b46"/>
+<path d="M495 0h34v480h-34z" fill="#263b46"/>
+<text x="56" y="57" fill="#96583d" font-size="18" letter-spacing="3" font-weight="700">NOV 22 · 2026</text>
+<text x="536" y="57" fill="#d1bea9" font-size="18" letter-spacing="3" font-weight="700">TWO RHYTHMS</text>
+<text x="56" y="124" fill="#2d3e45" font-size="36" font-weight="800">先把材料</text>
+<text x="56" y="170" fill="#2d3e45" font-size="36" font-weight="800">摆在眼前</text>
+<text x="536" y="124" fill="#f5e3ce" font-size="36" font-weight="800">什么时候</text>
+<text x="536" y="170" fill="#f5e3ce" font-size="36" font-weight="800">算是结束？</text>
+<rect x="62" y="222" width="376" height="174" rx="22" fill="#e8cba8"/>
+<rect x="82" y="244" width="336" height="130" rx="15" fill="#fff6e8"/>
+<circle cx="151" cy="308" r="39" fill="#e5aa7a"/><circle cx="151" cy="308" r="27" fill="#f3d7b4"/>
+<path d="M135 308h32M151 292v32" stroke="#96583d" stroke-width="4" stroke-linecap="round"/>
+<circle cx="246" cy="308" r="39" fill="#8ba999"/><circle cx="246" cy="308" r="27" fill="#cbe1c7"/>
+<path d="M233 305c13-20 20-4 28-13M231 319l30-7" fill="none" stroke="#467d69" stroke-width="4" stroke-linecap="round"/>
+<rect x="310" y="268" width="84" height="80" rx="12" fill="#c2a68d"/>
+<path d="M327 291h50M327 306h50M327 321h35" stroke="#fff4e6" stroke-width="5" stroke-linecap="round"/>
+<text x="60" y="439" fill="#6a5140" font-size="20">准备 · 整理 · 一步一步</text>
+<circle cx="730" cy="305" r="115" fill="none" stroke="#53717b" stroke-width="2" stroke-dasharray="8 10"/>
+<path d="M674 212A113 113 0 0 1 837 290" fill="none" stroke="#e9b66b" stroke-width="6" stroke-linecap="round"/>
+<path d="M826 268l14 27 16-25" fill="none" stroke="#e9b66b" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="638" y="265" width="184" height="94" rx="19" fill="#425c63" stroke="#81a0a0" stroke-width="2"/>
+<path d="M669 310h39M688.5 291v38" stroke="#f5e6ce" stroke-width="7" stroke-linecap="round"/>
+<circle cx="758" cy="303" r="8" fill="#e9b66b"/><circle cx="779" cy="323" r="8" fill="#e9b66b"/>
+<circle cx="730" cy="305" r="2" fill="#f5e6ce"/>
+<text x="536" y="439" fill="#d3c9bd" font-size="20">游戏 · 停下 · 仍在寻找办法</text>
+</svg>

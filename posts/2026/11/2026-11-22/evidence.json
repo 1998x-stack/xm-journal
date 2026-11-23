@@ -1,0 +1,73 @@
+{
+  "source": {
+    "id": "voice-2026-11-22",
+    "type": "user-provided transcript",
+    "date": "2026-11-22",
+    "description": "根据用户提供的 2026-11-22 中文口述转写整理。保留事实、感受和未解决的问题；未使用外部资料。"
+  },
+  "claims": [
+    {
+      "id": "sleep",
+      "kind": "user-statement",
+      "claim": "前一晚因玩游戏睡得晚，11月22日早上十点多起床；用户觉得定闹钟也没有解决问题。",
+      "source_id": "voice-2026-11-22"
+    },
+    {
+      "id": "housework",
+      "kind": "user-statement",
+      "claim": "起床后拖地、整理东西、丢垃圾并吃饭。",
+      "source_id": "voice-2026-11-22"
+    },
+    {
+      "id": "office",
+      "kind": "user-statement",
+      "claim": "去公司进行了教程及其他文档的转换，并整理优化一个代码仓库。",
+      "source_id": "voice-2026-11-22"
+    },
+    {
+      "id": "grocery",
+      "kind": "user-statement",
+      "claim": "傍晚约六点半买好菜，回家做了好几个菜，用户觉得菜做得挺不错。",
+      "source_id": "voice-2026-11-22"
+    },
+    {
+      "id": "cooking",
+      "kind": "user-statement",
+      "claim": "提前准备、边做边整理、按步骤操作，让做饭的过程感觉轻松愉快且顺利。",
+      "source_id": "voice-2026-11-22"
+    },
+    {
+      "id": "visualization",
+      "kind": "user-statement",
+      "claim": "晚饭后继续把教程转换成可视化页面。",
+      "source_id": "voice-2026-11-22"
+    },
+    {
+      "id": "game",
+      "kind": "user-statement",
+      "claim": "之后又玩《和平精英》，并感到明显的愧疚和不知如何处理。",
+      "source_id": "voice-2026-11-22"
+    },
+    {
+      "id": "uncertainty",
+      "kind": "editorial-synthesis",
+      "claim": "这次口述没有提及11月22日夜间游戏的时长与结束时间，不能把再次晚睡作为已发生事实。",
+      "source_id": "voice-2026-11-22",
+      "notes": "事实边界说明。"
+    },
+    {
+      "id": "tension",
+      "kind": "editorial-synthesis",
+      "claim": "厨房中通过提前准备获得顺畅体验，与游戏结束边界不明带来的困惑，构成当天的叙事对照。",
+      "source_id": "voice-2026-11-22",
+      "notes": "编辑性归纳；结束边界不明是待探索问题，而非已证实原因。"
+    },
+    {
+      "id": "experiment",
+      "kind": "editorial-synthesis",
+      "claim": "事先约定结束条件、拆分退出步骤、次日观察感受，是供用户选择的小实验。",
+      "source_id": "voice-2026-11-22",
+      "notes": "由编辑提出，不是用户已决定或执行的计划；无有效性承诺。"
+    }
+  ]
+}
