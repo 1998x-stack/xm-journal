@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1160 615" role="img" aria-labelledby="store-title store-desc">
+<title id="store-title">Skill Store 的交互链路设计草图</title>
+<desc id="store-desc">一个待验证的操作流程。OpenCode Web 前端发起 Skill 操作，Adapter 转换请求，OpenCode Server Plugin 调用校验、下载和重新加载等能力；状态与失败信息沿原路返回前端。图为口述设计梳理，不表示接口已经实现。</desc>
+<defs>
+ <marker id="store-arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M1 1 L9 5 L1 9" stroke="#446677" stroke-width="2" fill="none"/></marker>
+ <marker id="store-arrow-feedback" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M1 1 L9 5 L1 9" stroke="#cc8156" stroke-width="2" fill="none"/></marker>
+</defs>
+<rect width="1160" height="615" rx="22" fill="#f4f1eb"/>
+<g font-family="system-ui,'PingFang SC','Microsoft YaHei',sans-serif">
+<text x="58" y="65" font-size="19" fill="#7b716b" letter-spacing="3">SYSTEM NOTE / SKILL STORE</text>
+<text x="58" y="116" font-size="33" font-weight="700" fill="#243d49">一次操作，应该怎样穿过系统？</text>
+<text x="58" y="152" font-size="19" fill="#6b767c">以下是根据口述整理的待验证架构，而不是已经验收的实现。</text>
+<g>
+  <rect x="58" y="215" width="260" height="206" rx="17" fill="#e1efef" stroke="#a9cbc7" stroke-width="2"/>
+  <text x="80" y="255" font-size="19" fill="#4a7575">01 · 界面</text>
+  <text x="80" y="296" font-size="27" font-weight="700" fill="#1f5359">OpenCode Web</text>
+  <text x="80" y="332" font-size="18" fill="#355f63">选择 Skill / 发起操作</text>
+  <text x="80" y="363" font-size="18" fill="#355f63">展示进度与错误</text>
+  <rect x="80" y="383" width="120" height="25" rx="7" fill="#bad8d7"/>
+  <text x="140" y="401" font-size="15" text-anchor="middle" fill="#225c60">用户可见</text>
+</g>
+<g>
+  <rect x="433" y="215" width="265" height="206" rx="17" fill="#eee5f5" stroke="#c8b5db" stroke-width="2"/>
+  <text x="455" y="255" font-size="19" fill="#806a95">02 · 转接层</text>
+  <text x="455" y="296" font-size="29" font-weight="700" fill="#574170">Adapter</text>
+  <text x="455" y="332" font-size="18" fill="#66517a">转换请求与响应</text>
+  <text x="455" y="363" font-size="18" fill="#66517a">统一返回状态</text>
+  <rect x="455" y="383" width="122" height="25" rx="7" fill="#d8c8e7"/>
+  <text x="516" y="401" font-size="15" text-anchor="middle" fill="#574170">接口待梳理</text>
+</g>
+<g>
+  <rect x="808" y="215" width="296" height="206" rx="17" fill="#fff0de" stroke="#ddc3a3" stroke-width="2"/>
+  <text x="830" y="255" font-size="19" fill="#967950">03 · 服务能力</text>
+  <text x="830" y="296" font-size="26" font-weight="700" fill="#805b3e">Server Plugin</text>
+  <text x="830" y="332" font-size="18" fill="#815f41">校验 / 下载 / Reload</text>
+  <text x="830" y="363" font-size="18" fill="#815f41">具体执行顺序待确认</text>
+  <rect x="830" y="383" width="137" height="25" rx="7" fill="#f0d7b7"/>
+  <text x="898" y="401" font-size="15" text-anchor="middle" fill="#785637">能力待核验</text>
+</g>
+<path d="M321 286 H422" stroke="#446677" stroke-width="4" marker-end="url(#store-arrow)"/>
+<path d="M700 286 H797" stroke="#446677" stroke-width="4" marker-end="url(#store-arrow)"/>
+<text x="373" y="274" font-size="16" text-anchor="middle" fill="#557180">请求</text>
+<text x="747" y="274" font-size="16" text-anchor="middle" fill="#557180">调用</text>
+<path d="M950 435 V471 H565 H187 V435" fill="none" stroke="#cc8156" stroke-width="3.5" marker-end="url(#store-arrow-feedback)"/>
+<text x="576" y="456" font-size="18" text-anchor="middle" fill="#a45e39">执行结果、校验问题、错误反馈返回界面</text>
+<path d="M58 515 H1104" stroke="#d0ccc6" stroke-width="2"/>
+<text x="58" y="553" font-size="21" font-weight="700" fill="#334952">下一步要验证的问题</text>
+<text x="58" y="585" font-size="18" fill="#66747a">拿“下载一个 Skill”做最小实例：请求字段是什么？谁校验？何时 Reload？失败如何返回？</text>
+</g>
+</svg>
